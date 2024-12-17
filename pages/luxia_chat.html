@@ -93,7 +93,7 @@
                     ></object>
                     <span>Custom chat</span>
                   </div>
-                  <a href="" class="luxia-menu-container__sub-title-more">
+                  <a href="#" class="luxia-menu-container__sub-title-more">
                     더보기
                   </a>
                 </div>
@@ -129,7 +129,7 @@
                     ></object>
                     <span>Recents</span>
                   </div>
-                  <a href="" class="luxia-menu-container__sub-title-more">
+                  <a href="#" class="luxia-menu-container__sub-title-more">
                     더보기
                   </a>
                 </div>
@@ -359,7 +359,11 @@
               <div class="luxia-answer-container__cover">
                 <!-- question section -->
                 <div class="luxia-answer-container__question-section">
-                  <button type="button" class="btn btn-secondary btn-sm">
+                  <button
+                    id="moveToNewChat"
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                  >
                     <img src="assets/icons/chat/add-small.svg" />
                     <span>새 대화</span>
                   </button>
@@ -495,9 +499,31 @@
                         <button type="button" class="btn btn-circle">
                           <img src="assets/icons/retry.svg" />
                         </button>
-                        <button type="button" class="btn btn-default">
+                        <!--/* [D] tooltip 사용하는 button일 경우 'jsTooltip' class 삽입,
+                          data-target: target tooltip의 '#id' */-->
+                        <button
+                          type="button"
+                          data-target="#answerTooltip20241205"
+                          class="jsTooltip btn btn-default"
+                        >
                           <img src="assets/icons/dots.svg" />
                         </button>
+                        <!--/* [D] tooltip */-->
+                        <div id="answerTooltip20241205" class="tooltip">
+                          <div class="icon-btns">
+                            <button type="button">
+                              <img src="assets/icons/thumbs-up.svg" />
+                            </button>
+                            <button type="button">
+                              <img src="assets/icons/thumbs-down.svg" />
+                            </button>
+                          </div>
+                          <div class="text-btns">
+                            <button type="button">자세히보기</button>
+                            <div class="divide"></div>
+                            <button type="button">간단히보기</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -522,18 +548,49 @@
               </div>
             </div>
           </section>
+
           <!-- bottom chat box -->
           <div class="luxia-chat-container__chat">
             <div class="textarea-solid" tabindex="0">
               <div class="textarea-solid__inner">
                 <textarea placeholder="무엇이든 물어보세요."></textarea>
                 <div class="button-area">
+                  <!--/* [D] select overlay 사용하는 button일 경우 'jsSelectOverlays' class 삽입,
+                    data-target: target select overlay의 '#id' */-->
                   <button
                     type="button"
-                    class="luxia-chat-container__chat-tooltip"
+                    data-target="#selectOverlay20241230"
+                    class="jsSelectOverlays luxia-chat-container__chat-tooltip"
                   >
                     <img src="assets/icons/chat/plus.svg" />
                   </button>
+                  <!-- select overlay -->
+                  <div id="selectOverlay20241230" class="select-overlay-family">
+                    <div class="select-overlay">
+                      <div class="select-overlay-inner">
+                        <label>RAG</label>
+                        <input type="checkbox" />
+                      </div>
+                      <div class="select-overlay-info">
+                        검색 증강을 통한 정확한 답변 제공
+                      </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="select-overlay">
+                      <div class="select-overlay-inner">
+                        <label>Web Search</label>
+                        <input type="checkbox" />
+                      </div>
+                      <div class="select-overlay-info">실시간 검색 적용</div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="select-overlay">
+                      <div class="select-overlay-inner">
+                        <label>Others</label>
+                        <input type="checkbox" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <button
                   type="button"

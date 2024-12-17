@@ -131,3 +131,69 @@ if (solidTexareaList && solidTexareaList.length > 0) {
     }
   });
 }
+
+// handle overlays
+const jsSelectOverlay = document.querySelectorAll('.jsSelectOverlays');
+if (jsSelectOverlay && jsSelectOverlay.length > 0) {
+  jsSelectOverlay.forEach((btn) => {
+    const targetId = btn.dataset.target;
+    const target = document.querySelector(targetId);
+    if (target) {
+      btn.addEventListener('click', () => {
+        const isOpen = target.classList.contains('active');
+        if (isOpen) {
+          target.classList.remove('active');
+        } else {
+          target.classList.add('active');
+        }
+      });
+      document.addEventListener('click', (event) => {
+        if (!target.contains(event.target) && !btn.contains(event.target)) {
+          target.classList.remove('active');
+        }
+      });
+    }
+  });
+}
+
+// handle tooltips
+const jsTooltips = document.querySelectorAll('.jsTooltip');
+if (jsTooltips && jsTooltips.length > 0) {
+  jsTooltips.forEach((btn) => {
+    const targetId = btn.dataset.target;
+    const { top, left, width, height } = btn.getBoundingClientRect();
+    const target = document.querySelector(targetId);
+    if (target) {
+      const compStyles = window.getComputedStyle(target);
+      const isTargetTop =
+        target.classList.contains('.top-left') ||
+        target.classList.contains('.top-right');
+      const isTargetRight =
+        target.classList.contains('.top-right') ||
+        target.classList.contains('.bottom-right');
+      const targetTop = isTargetTop ? top - 12 : top + height + 12;
+      const targetLeft = isTargetRight ? left - 8 : left + width + 8;
+
+      btn.addEventListener('click', () => {
+        const isOpen = target.classList.contains('active');
+        if (isOpen) {
+          target.classList.remove('active');
+        } else {
+          target.classList.add('active');
+        }
+        if (
+          (compStyles.top === 'auto' && compStyles.bottom === 'auto') ||
+          (compStyles.left === 'auto' && compStyles.right === 'auto')
+        ) {
+          target.style.top = `${targetTop}px`;
+          target.style.left = `${targetLeft}px`;
+        }
+      });
+      document.addEventListener('click', (event) => {
+        if (!target.contains(event.target) && !btn.contains(event.target)) {
+          target.classList.remove('active');
+        }
+      });
+    }
+  });
+}

@@ -111,7 +111,7 @@
   border: solid 2px transparent;
   background-color: var(--gray-50);
   border-radius: 16px;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 56px;
   padding: 0;
   transition: all 0.3s ease;
@@ -175,6 +175,7 @@
     display: none;
     align-items: center;
     justify-content: start;
+    position: relative;
   }
 }
 .textarea-solid.focus .textarea-solid__inner {

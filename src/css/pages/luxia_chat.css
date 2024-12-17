@@ -192,6 +192,7 @@
   line-height: 1.6;
   letter-spacing: -0.02em;
   color: var(--main-black);
+  padding-top: 3px;
 }
 
 .luxia-answer-container__reference-section {
@@ -261,6 +262,12 @@
   }
   ol, ul {
     padding-left: 19px;
+    li {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   ol {
     list-style-type: decimal;
@@ -294,6 +301,11 @@
   display: flex;
   gap: 4px;
   align-items: center;
+  position: relative;
+  .tooltip {
+    bottom: -60px;
+    right: -9px;
+  }
 }
 
 .luxia-answer-container__recommand-inner {
@@ -329,4 +341,20 @@
   letter-spacing: -0.02em;
   color: var(--gray-700);
   max-width: 100%;
+}
+
+@media (min-width: 810px) { 
+  .luxia-answer-container__cover {
+    gap: 64px;
+    margin-bottom: 56px;
+  }
+  .luxia-answer-container__question-section {
+    gap: 40px;
+  }
+  .luxia-answer-container__answer-inner {
+    gap: 40px;
+  }
+  .luxia-answer-container__answer-detail {
+    gap: 24px;
+  }
 }

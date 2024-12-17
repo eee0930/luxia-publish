@@ -7,6 +7,7 @@
 @import url('input.css');
 @import url('badge.css');
 @import url('card.css');
+@import url('overlays.css');
 
 :root {
   --jumbotron-font: 'Poppins';
