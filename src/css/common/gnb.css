@@ -1,0 +1,112 @@
+.luxia-gnb-container {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  height: 64px;
+  padding: 6px 16px;
+  border-bottom: solid 1px var(--gray-300);
+  background-color: var(--main-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main {
+  .luxia-gnb-container {
+    background-color: var(--gray-100);
+  }
+}
+.luxia-gnb-container__head-title, .luxia-gnb-container__profile {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.luxia-gnb-container__head-logo {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  img {
+    display: none;
+  }
+}
+.luxia-gnb-container-menu-name {
+  display: none;
+}
+.luxia-gnb-container__button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.luxia-gnb-container__profile {
+  gap: 8px;
+}
+.luxia-gnb-container__profile-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.luxia-gnb-container__profile-nickname {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 1200px) {
+  .luxia-gnb-container {
+    padding: 14px 40px;
+  }
+  .luxia-gnb-container__head {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
+  .luxia-gnb-container__head-title {
+    gap: 8px;
+    will-change: display;
+    transition: display 0.4s ease-out;
+  }
+  .luxia-gnb-container__head-button {
+    display: none;
+  }
+  .luxia-gnb-container__head-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    img {
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+  }
+  .luxia-gnb-container-menu-name {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--gray-700);
+  }
+  .menu-active-pc {
+    .luxia-gnb-container__head-title {
+      display: none;
+    }
+    .luxia-gnb-container-menu-name {
+      opacity: 1;
+    }
+  }
+}

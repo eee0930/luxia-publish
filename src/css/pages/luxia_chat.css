@@ -1,0 +1,219 @@
+.luxia-chat-container {
+  width: 100%;
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+
+/* [LUXIA Chat Intro (주요이슈, 질문추천)] */
+.luxia-chat-container__cover {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 24px;
+  border: 1px solid var(--gray-300);
+}
+.luxia-chat-container__cover-tab {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.luxia-chat-container__cover-contents {
+  width: 100%;
+}
+.luxia-chat-container__cover-contents-list {
+  flex: 100% 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  display: none;
+  &.active {
+    display: flex;
+    z-index: 1;
+  }
+}
+.luxia-chat-container__cover-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+.luxia-chat-container__cover-list-wrapper {
+  flex: 1 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.luxia-chat-container__cover-ul-rank,
+.luxia-chat-container__cover-ul-question {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 100% 0 0;
+  li {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    color: var(--main-black);
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.02em;
+      max-width: calc(100% - 32px);
+    }
+  }
+}
+.luxia-chat-container__cover-ul-rank li span {
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;  
+}
+.luxia-chat-container__cover-ul-question {
+  padding-left: 18px;
+  gap: 8px;
+  li {
+    position: relative;
+  }
+  li:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -18px;
+    width: 14px;
+    height: 14px;
+    background-image: url('data:image/svg+xml,<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0967 4.53223C10.0967 5.39811 9.93717 6.21387 9.61816 6.97949C9.29915 7.74056 8.88216 8.39225 8.36719 8.93457C8.02083 9.29915 7.63346 9.61589 7.20508 9.88477C6.78125 10.1491 6.34147 10.3519 5.88574 10.4932C5.86751 10.557 5.85612 10.6367 5.85156 10.7324C5.84701 10.8281 5.84473 10.9124 5.84473 10.9854C5.84473 11.4502 5.97005 11.8102 6.2207 12.0654C6.47135 12.3206 6.78125 12.4482 7.15039 12.4482C7.53776 12.4482 7.83398 12.43 8.03906 12.3936C8.2487 12.3617 8.41504 12.3298 8.53809 12.2979L8.42188 12.8105C8.14388 12.8971 7.80892 12.9723 7.41699 13.0361C7.02962 13.1045 6.65592 13.1387 6.2959 13.1387C5.65332 13.1387 5.15658 12.9678 4.80566 12.626C4.45475 12.2842 4.2793 11.7806 4.2793 11.1152C4.2793 11.0651 4.28158 10.999 4.28613 10.917C4.29069 10.835 4.29753 10.7689 4.30664 10.7188C3.22656 10.6823 2.35156 10.3063 1.68164 9.59082C1.01628 8.87533 0.683594 7.94792 0.683594 6.80859C0.683594 5.92448 0.843099 5.10417 1.16211 4.34766C1.48112 3.58659 1.89583 2.93034 2.40625 2.37891C2.92122 1.81836 3.52051 1.3763 4.2041 1.05273C4.89225 0.729167 5.59863 0.567383 6.32324 0.567383C7.43522 0.567383 8.34212 0.927409 9.04395 1.64746C9.74577 2.36296 10.0967 3.32454 10.0967 4.53223ZM8.49023 4.13574C8.49023 3.22428 8.29655 2.4974 7.90918 1.95508C7.52181 1.41276 6.95215 1.1416 6.2002 1.1416C5.61686 1.1416 5.07454 1.31478 4.57324 1.66113C4.07194 2.00749 3.63444 2.51562 3.26074 3.18555C2.93717 3.77344 2.69336 4.42057 2.5293 5.12695C2.36979 5.83333 2.29004 6.4987 2.29004 7.12305C2.29004 8.08008 2.486 8.8252 2.87793 9.3584C3.27441 9.8916 3.83952 10.1582 4.57324 10.1582C5.19759 10.1582 5.75814 9.97135 6.25488 9.59766C6.75163 9.22396 7.16178 8.75228 7.48535 8.18262C7.80892 7.61751 8.05729 6.97949 8.23047 6.26855C8.40365 5.55762 8.49023 4.84668 8.49023 4.13574ZM12.9609 9.71387C12.9609 9.96908 12.8675 10.1878 12.6807 10.3701C12.4984 10.5479 12.2796 10.6367 12.0244 10.6367C11.7692 10.6367 11.5482 10.5479 11.3613 10.3701C11.179 10.1878 11.0879 9.96908 11.0879 9.71387C11.0879 9.45866 11.179 9.23991 11.3613 9.05762C11.5482 8.87077 11.7692 8.77734 12.0244 8.77734C12.2796 8.77734 12.4984 8.87077 12.6807 9.05762C12.8675 9.23991 12.9609 9.45866 12.9609 9.71387Z" fill="%230096F6"/></svg>');
+    background-position: 0px 0px;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+  }
+  
+}
+.luxia-chat-container__cover-arrow {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  button {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+  .swiper-button-disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+.luxia-chat-container__chat {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  z-index: 50;
+}
+
+@media (min-width: 810px) {
+  .luxia-layout-container__body-section {
+    min-height: 390px;
+  }
+  .luxia-chat-container__cover-ul-rank {
+    flex: 270px 0 0;
+  }
+  .luxia-chat-container__cover-arrow {
+    display: none;
+  }
+
+  .luxia-chat-container__chat {
+    position: relative;
+    bottom: unset;
+    left: 0;
+    right: 0;
+    padding: 0px;
+    z-index: 50;
+    width: 100%;
+    max-width: 770px;
+    margin-top: 24px;
+  }
+}
+
+/* [Answer Section (답변, 답변참고)] */
+.luxia-answer-container__cover {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.luxia-answer-container__question-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: start;
+  .btn {
+    width: max-content;
+  }
+}
+.luxia-answer-container__question-cover {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: start;
+}
+.luxia-answer-container__question-profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.luxia-answer-container__question {
+  flex: 1 0 0%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  color: var(--main-black);
+}
+
+.luxia-answer-container__reference-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.luxia-answer-container__reference-title-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.luxia-answer-container__reference-title-cover {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.luxia-answer-container__reference-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--main-black);
+}
+

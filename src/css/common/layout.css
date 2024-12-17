@@ -1,0 +1,88 @@
+.luxia-layout-container {
+  display: flex;
+  justify-content: start;
+  min-height: 100vh;
+  contain: layout;
+  position: relative;
+}
+.luxia-layout-container__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  will-change: display;
+}
+.luxia-layout-container__section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-white);
+  flex: 1 0 0%;
+  width: 100%;
+  max-width: 100%;
+  &.main {
+    background-color: var(--gray-100);
+  }
+}
+.luxia-layout-container__body {
+  width: 100%;
+  height: 100%;
+}
+.luxia-layout-container__body-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 0 16px 40px;
+  position: relative;
+  height: 100%;
+}
+@media (min-width: 810px) {
+  .luxia-layout-container__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .luxia-layout-container__body-section {
+    width: 770px;
+    padding: 0;
+    height: auto;
+  }
+}
+@media(min-width: 1200px) {
+  .luxia-layout-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &.menu-active-pc {
+      .luxia-layout-container__menu {
+        transform: unset;
+        width: 260px;
+      }
+    }
+  }
+  .luxia-layout-container__section {
+    gap: 0;
+  }
+  .luxia-layout-container__menu {
+    display: block !important;
+    position: relative;
+    right: unset;
+    transform: unset;
+    width: 64px;
+    will-change: width;
+    transition: width 0.4s ease-out;
+  }
+  .luxia-layout-container__body {
+    padding: 80px 0;
+  }
+}
+
+@media(min-width: 1440px) {
+
+}

@@ -1,0 +1,18 @@
+.badge {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  padding: 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  background-color: var(--gray-50);
+  color: var(--main-black);
+}
+.badge-fixed {
+  width: 24px;
+}

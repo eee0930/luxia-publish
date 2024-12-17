@@ -1,0 +1,30 @@
+.luxia-jumbotron-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  &.displayNone {
+    display: none;
+  }
+}
+.luxia-jumbotron-container__title {
+  font-family: var(--jumbotron-font);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.luxia-jumbotron-container__description {
+  color: var(--gray-700);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 1024px) {
+  .luxia-jumbotron-container__title  {
+    font-size: 48px;
+  }
+}

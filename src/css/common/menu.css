@@ -1,0 +1,299 @@
+.luxia-menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.luxia-menu-container__dimm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-black);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  will-change: opacity;
+}
+.luxia-menu-container__inner {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 16px;
+  padding: 14px 24px 14px 16px;
+  background-color: var(--main-white);
+  border-right: solid 1px var(--gray-300);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+.menu-active {
+  .luxia-menu-container__inner {
+    transform: translateX(0%);
+  }
+  .luxia-menu-container__dimm {
+    opacity: 0.7;
+  }
+}
+.luxia-menu-container__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+.luxia-menu-container__button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.luxia-menu-container__head-logo {
+  color: var(--main-black);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  img {
+    display: none;
+  }
+}
+.luxia-menu-container__head-button-pc {
+  display: none;
+}
+.luxia-menu-container__cover {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+.luxia-menu-container__menu, .luxia-menu-container__sub-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: start;
+  li {
+    width: 100%;
+  }
+}
+.luxia-menu-container__menu-target, .luxia-menu-container__sub-menu-target {
+  display: flex;
+  flex-direction: row;
+  height: 38px;
+  border-radius: 8px;
+  gap: 8px;
+  justify-content: start;
+  align-items: center;
+  padding: 0 6px;
+  color: var(--main-black);
+  span {
+    font-family: var(--main-font);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+}
+.luxia-menu-container__sub {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.luxia-menu-container__sub-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+.luxia-menu-container__sub-title-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 4px;
+  span {
+    color: var(--gray-700);
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--gray-900);
+  }
+}
+.luxia-menu-container__sub-title-more {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--gray-500);
+}
+.luxia-menu-container__sub-menu {
+  gap: 0px;
+}
+.luxia-menu-container__sub-menu-target {
+  gap: 10px;
+  color: var(--gray-700);
+  span {
+    display: block;
+    height: 21px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+  }
+}
+
+
+@media(min-width: 1200px) {
+  .luxia-menu-container {
+    position: sticky;
+    top: 0;
+  }
+  .luxia-menu-container__dimm {
+    display: none;
+  }
+  .luxia-menu-container__inner {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 14px 10px;
+    transform: unset;
+  }
+  .luxia-menu-container__head {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    gap: 0px;
+    justify-content: center;
+    will-change: justify-content, padding;
+  }
+  .luxia-menu-container__head-button {
+    display: none;
+  }
+  .luxia-menu-container__head-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    will-change: opacity, display, width;
+    img {
+      display: block;
+    }
+  }
+  .luxia-menu-container__head-button-pc {
+    display: block;
+    button {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: solid 1px #CFD0D1;
+    }
+  }
+  .luxia-menu-container__menu li,
+  .luxia-menu-container__sub-menu li {
+    border-radius: 8px;
+  }
+  .luxia-menu-container__menu-target {
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+    img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+    span {
+      transition: opacity 0.4s 0.5s ease-out;
+      will-change: opacity, display, width;
+    }
+  }
+  .luxia-menu-container__menu-target,
+  .luxia-menu-container__sub-menu-target {
+    border-radius: 8px;
+    will-change: background-color;
+    transition: background-color 0.3s ease;
+    padding: 0 6px;
+    &:hover {
+      background-color: var(--gray-50);
+      cursor: url("../../../assets/icons/menu/hover_pointer.svg") 16 15, auto;
+    }
+    &:focus {
+      cursor: url("../../../assets/icons/menu/focus_pointer.svg") 16 15, auto;
+    }
+    span {
+      cursor: inherit;
+    }
+  }
+  .luxia-menu-container__menu-target:focus {
+    background-color: var(--main-white);
+  }
+  .luxia-menu-container__sub {
+    transition: opacity 0.4s 0.5s ease-out;
+    will-change: opacity, display, width;
+  }
+  .luxia-menu-container__head-logo, 
+  .luxia-menu-container__menu-target span,
+  .luxia-menu-container__sub {
+    opacity: 0;
+    width: 0;
+  }
+  .luxia-menu-container__sub-menu {
+    max-height: 250px;
+    overflow: auto;
+  }
+  .menu-active-pc {
+    .luxia-menu-container__head {
+      padding: 0 6px;
+      justify-content: space-between;
+    }
+    .luxia-menu-container__menu-target {
+      justify-content: start;
+    }
+    .luxia-menu-container__head-logo, 
+    .luxia-menu-container__menu-target span,
+    .luxia-menu-container__sub {
+      opacity: 1;
+      width: auto;
+      display: flex;
+    }
+    .luxia-menu-container__head-button-close {
+      display: block;
+    }
+    .luxia-menu-container__head-button-open {
+      display: none;
+    }
+  }
+  .menu-hide {
+    .luxia-menu-container__head-logo, 
+    .luxia-menu-container__menu-target span,
+    .luxia-menu-container__sub {
+      display: none;
+    }
+  }
+  .luxia-menu-container__head-button-close {
+    display: none;
+  }
+  .luxia-menu-container__head-button-open {
+    display: block;
+  }
+}
