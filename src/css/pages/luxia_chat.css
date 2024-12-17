@@ -124,6 +124,7 @@
   right: 0;
   padding: 16px;
   z-index: 50;
+  background-color: var(--main-white);
 }
 
 @media (min-width: 810px) {
@@ -153,6 +154,7 @@
 /* [Answer Section (답변, 답변참고)] */
 .luxia-answer-container__cover {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 48px;
 }
@@ -216,4 +218,115 @@
   letter-spacing: -0.02em;
   color: var(--main-black);
 }
+.luxia-answer-container__reference-list .swiper-wrapper {
+  display: flex;
+  .swiper-slide {
+    flex: auto 0 0;
+  }
+}
+.luxia-answer-container__answer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.luxia-answer-container__answer-cover {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: start;
+}
+.luxia-answer-container__answer-cover-logo {
+  width: 32px;
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+  }
+}
+.luxia-answer-container__answer-detail {
+  width: 100%;
+  max-width: 100%;
+  flex: 1 0 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  color: var(--main-black);
+  b {
+    font-weight: 600;
+  }
+  ol, ul {
+    padding-left: 19px;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  ul {
+    list-style-type: disc;
+  }
+}
 
+.luxia-answer-container__answer-info-cover {
+  width: 100%;
+  height: 56px;
+  border-bottom: solid 1px var(--gray-300);
+}
+.luxia-answer-container__answer-info {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+  align-items: center;
+}
+.luxia-answer-container__answer-time {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--gray-500);
+}
+.luxia-answer-container__answer-buttons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.luxia-answer-container__recommand-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: end;
+}
+.luxia-answer-container__recommand-answer {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--gray-500);
+}
+.luxia-answer-container__recommand-cover {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: end;
+  width: 100%;
+}
+.luxia-answer-container__recommand-list {
+  width: max-content;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: solid 1px var(--gray-300);
+  background-color: var(--main-white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--gray-700);
+  max-width: 100%;
+}

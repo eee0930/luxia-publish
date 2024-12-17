@@ -73,17 +73,17 @@ const chatTextArea = document.querySelector(
 const sendChatBtn = document.querySelector('.luxia-chat-container__chat-btn');
 if (chatTextArea && sendChatBtn) {
   const handleClickChatSendBtn = (target) => {
-    const value = target.value;
+    const value = target.value.trim();
     if (value === '' || value.length === 0) return;
     const isActiveAnswerSection = answerSection.classList.contains('active');
     if (!isActiveAnswerSection) {
       luxiaChatJumbotron.classList.add('displayNone');
       introSection.classList.remove('active');
       answerSection.classList.add('active');
+      buildAnswerReferenceSwiper();
     }
     target.value = '';
     const parentDiv = target.closest('.textarea-solid');
-    console.log(parentDiv);
     if (parentDiv) {
       parentDiv.classList.remove('focus');
     }
@@ -92,3 +92,25 @@ if (chatTextArea && sendChatBtn) {
     handleClickChatSendBtn(chatTextArea)
   );
 }
+
+const buildAnswerReferenceSwiper = () => {
+  const answerReferenceListCover = document.querySelector(
+    '.luxia-answer-container__reference-list'
+  );
+  const answerReferenceList =
+    answerReferenceListCover?.querySelectorAll('.swiper-slide');
+  let luxiaAnswerReferenceSwiper;
+  if (answerReferenceList && answerReferenceList.length > 0) {
+    if (luxiaAnswerReferenceSwiper) {
+      luxiaAnswerReferenceSwiper.destroy();
+      luxiaAnswerReferenceSwiper = undefined;
+    }
+    const options = {
+      loop: false,
+      slidesPerView: 'auto',
+      centeredSlides: false,
+      spaceBetween: 16,
+    };
+    luxiaAnswerReferenceSwiper = new Swiper(answerReferenceListCover, options);
+  }
+};

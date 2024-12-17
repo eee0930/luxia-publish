@@ -52,6 +52,13 @@
 }
 .list-card.card-sm {
   width: 246px;
-  height: 142px;
+  height: 122px;
   box-shadow: var(--shadow-sm);
+}
+
+
+@media (min-width: 810px) {
+  .list-card.card-sm {
+    height: 142px;
+  }
 }
