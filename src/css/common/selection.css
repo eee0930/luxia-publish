@@ -1,0 +1,65 @@
+.checkbox, .radio {
+  /* 기본 스타일 제거 */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.3335 8.125L7.19196 11.3333L13.3335 4" stroke="%23E4E6EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+.checkbox:checked {
+  background-color: var(--primary-500);
+  border-color: var(--primary-500);
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.3335 8.125L7.19196 11.3333L13.3335 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+.checkbox:checked::after {
+  content: '';
+}
+.checkbox:disabled {
+  cursor: not-allowed;
+  background-color: var(--gray-50);
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.3335 8.125L7.19196 11.3333L13.3335 4" stroke="%23E4E6EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+.radio {
+  width: 40px;
+  height: 24px;
+  border-radius: 999px;
+  padding: 2px;
+  border: none;
+  background-color: var(--gray-200);
+  transition: background-color 0.2s ease;
+  will-change: background-color;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background-color: var(--main-white);
+    box-shadow: var(--shadow-xs);
+    transition: left 0.2s ease;
+    will-change: left;
+  }
+}
+.radio:checked {
+  background-color: var(--primary-500);
+  &::after {
+    left: 18px;
+  }
+}
