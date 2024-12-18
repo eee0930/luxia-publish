@@ -318,10 +318,12 @@
                       <!-- [D] 답변 참고 갯수 -->
                       <label class="badge">249</label>
                     </div>
-                    <a href="" class="btn btn-text">
+                    <!--/* [D] popup-side를 사용할 경우 'jsSidePopup' class 추가 
+                      data-target: target popup-side의 '#id' */-->
+                    <button data-target="#popupSide20241235" class="jsSidePopup btn btn-text">
                       <span>더보기</span>
                       <img src="assets/icons/chat/arrow_right.svg" />
-                    </a>
+                    </button>
                   </div>
                   <div class="swiper-container luxia-answer-container__reference-list">
                     <div class="swiper-wrapper">
@@ -493,6 +495,112 @@
                 <button type="button" class="btn btn-send luxia-chat-container__chat-btn">
                   <span class="blind">send button</span>
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--/* [D] popup-side (답변 참고) */-->
+    <div id="popupSide20241235" class="popup-side">
+      <div class="overlay-dimm"></div>
+      <div class="popup-side__inner">
+        <button type="button" class="times">
+          <img src="assets/icons/times.svg" />
+        </button>
+        <div class="popup-side__cover">
+          <div class="popup-headline">
+            <div class="popup-title">
+              <img src="assets/icons/note.svg" />
+              <span>답변참고</span>
+            </div>
+            <div class="popup-description">
+              건강보험심사평가원 운영규정에서 위원회의 설치와 기능에 대해 자세히 알려줘
+            </div>
+          </div>
+          <div class="popup-divide"></div>
+          <div class="luxia-anwser-container__cards">
+            <div class="luxia-anwser-container__cards-set">
+              <div class="list-card card-lg">
+                <div class="eyebrow">
+                  <div class="from">
+                    <img src="assets/imgs/jungang.png" />
+                    <span>중앙일보</span>
+                  </div>
+                  <div class="buttons">
+                    <button type="button" class="luxia-anwser-container__summary-btn">요약하기</button>
+                    <div class="divide"></div>
+                    <button type="button">원문보기</button>
+                  </div>
+                </div>
+                <div class="context">
+                  <div class="title">심사평가원, 2024년도 선별집중심사 항목 공개</div>
+                  <div class="description">
+                    신규 5개 항목 포함하여 총 19개 항목 선정 - 건강보험심사평가원(원장 강중구, 이하 심사평가원)은 28일
+                    심사평가원 누리집과 요양기관 업무포탈을 통해 2024년도 선별집중심사 항목을 공개한다고 밝혔다.
+                  </div>
+                </div>
+                <div class="date">2024.12.03</div>
+              </div>
+              <div class="luxia-anwser-container__summary-cover">
+                <div class="luxia-anwser-container__summary-title">
+                  <img src="assets/icons/pencil.svg" />
+                  <span>원문을 간단히 요약했어요.</span>
+                </div>
+                <div class="luxia-anwser-container__summary-text">
+                  2024년도 선별집중심사 항목이 공개되었습니다. 총 19개를 선정하였으며, 이는 진료비 증가와 사회적 이슈
+                  등을 반영한 결과입니다. 신규항목으로는 프로칼시토닌 검사, 초음파 검사, 결장경하 종양수술, 관절조영,
+                  트로포닌 검사가 포함되어 있으며, 골다공증치료제도 관리 항목으로 확대됩니다.
+                </div>
+                <div class="divide"></div>
+              </div>
+            </div>
+            <div class="luxia-anwser-container__cards-set">
+              <div class="list-card card-lg">
+                <div class="eyebrow">
+                  <div class="from">
+                    <img src="assets/imgs/newsis.png" />
+                    <span>뉴스1</span>
+                  </div>
+                  <div class="buttons">
+                    <button type="button" class="luxia-anwser-container__summary-btn">요약하기</button>
+                    <div class="divide"></div>
+                    <button type="button">원문보기</button>
+                  </div>
+                </div>
+                <div class="context">
+                  <div class="title">서면으로 진행하는 건강보험 심판청구 분쟁조정회의</div>
+                  <div class="description">
+                    최근 이같은 내용의 '건강보험분쟁조정위원회사무국 종합감사 처분 요구서'를 공개했다.
+                    건강보험분쟁조정위원회는 요양기관이 건강보험심사평가원... 운영규정에는 위원회 회의와 관련해 구성원
+                    과반수 출석
+                  </div>
+                </div>
+                <div class="date">2024.12.03</div>
+              </div>
+            </div>
+            <div class="luxia-anwser-container__cards-set">
+              <div class="list-card card-lg">
+                <div class="eyebrow">
+                  <div class="from">
+                    <img src="assets/imgs/kbsnews.png" />
+                    <span>KBS 뉴스</span>
+                  </div>
+                  <div class="buttons">
+                    <button type="button" class="luxia-anwser-container__summary-btn">요약하기</button>
+                    <div class="divide"></div>
+                    <button type="button">원문보기</button>
+                  </div>
+                </div>
+                <div class="context">
+                  <div class="title">자동차 보험 한인과 진료비 합리화</div>
+                  <div class="description">
+                    처리 규정’ 개정안을 행정예고한다고8일 밝혔다. 이번 개정안은 최근 증가하고 있는 자동차보험 한의과
+                    진료비를 합리화하고, 한의과 진료의 품질을...
+                  </div>
+                </div>
+                <div class="date">2024.12.03</div>
               </div>
             </div>
           </div>

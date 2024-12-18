@@ -134,3 +134,116 @@
     color: var(--gray-700);
   }
 }
+
+/* popup side */
+.popup-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+  &.open {
+    display: block;
+  }
+  .overlay-dimm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-black);
+    opacity: 0.7;
+  }
+}
+.popup-side__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-white);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 16px 24px;
+  border-right: 1px solid var(--gray-300);
+  overflow-y: auto;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.3s ease-in;
+  .times {
+    position: sticky;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    min-width: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    z-index: 5;
+  }
+}
+.popup-side.open .popup-side__inner {
+  opacity: 1;
+}
+.popup-side__cover {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .popup-headline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-right: 16px;
+  }
+  .popup-title {
+    display: flex;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--main-black);
+    img, svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .popup-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--gray-700);    
+  }
+  .popup-divide {
+    width: 100%;
+    height: 1px;
+    border-bottom: solid 1px var(--gray-300);
+  }
+}
+
+@media (min-width: 810px) {
+  .popup-side__inner {
+    left: unset;
+    width: 550px;
+    opacity: 1;
+    transform: translateX(100%);
+    will-change: transform;
+    transition: transform 0.3s ease-in;
+    padding: 40px;
+    gap: 40px;
+  }
+  .popup-side.open .popup-side__inner {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .popup-side__cover {
+    .popup-description {
+      width: 454px;
+    }
+  }
+}
