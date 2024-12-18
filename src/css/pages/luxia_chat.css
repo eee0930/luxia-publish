@@ -139,11 +139,11 @@
   }
 
   .luxia-chat-container__chat {
-    position: relative;
+    /* position: relative;
     bottom: unset;
     left: 0;
-    right: 0;
-    padding: 0px;
+    right: 0; */
+    padding: 0 0 24px;
     z-index: 50;
     width: 100%;
     max-width: 770px;
