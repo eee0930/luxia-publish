@@ -1,0 +1,8 @@
+{
+  "name": "luxia-publish",
+  "version": "0.1.0",
+  "description": "A AI Chat Service project with basic HTML, CSS, and live server.",
+  "main": "index.html",
+  "author": "HwaYeon Song",
+  "license": "LUXIA"
+}
