@@ -172,6 +172,7 @@
     width: 100%;
     padding: 14px 10px;
     transform: unset;
+    gap: 40px;
   }
   .luxia-menu-container__head {
     position: relative;

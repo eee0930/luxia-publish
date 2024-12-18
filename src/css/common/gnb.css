@@ -63,6 +63,7 @@
 @media (min-width: 1200px) {
   .luxia-gnb-container {
     padding: 14px 40px;
+    border-bottom: none;
   }
   .luxia-gnb-container__head {
     display: flex;
