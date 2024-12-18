@@ -380,6 +380,9 @@
   height: 0;
   will-change: display, height;
   transition: height 0.3s ease;
+  &.show {
+    display: flex;
+  }
 }
 .luxia-anwser-container__summary-title,
 .luxia-anwser-container__summary-text  {
