@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LUXIA Chat | LUXIA</title>
+    <title>LUXIA Docs | LUXIA</title>
     <base href="../" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
     <link rel="stylesheet" href="src/css/common/style.css" />
-    <link rel="stylesheet" href="src/css/pages/luxia_chat.css" />
+    <link rel="stylesheet" href="src/css/pages/luxia_docs.css" />
   </head>
   <body>
     <div class="luxia-layout-container menu-active-pc">
@@ -143,7 +143,7 @@
                 <span>Ask LUXIA</span>
               </div>
             </div>
-            <div class="luxia-gnb-container-menu-name">LUXIA Chat</div>
+            <div class="luxia-gnb-container-menu-name">LUXIA Docs</div>
           </div>
           <div class="luxia-gnb-container__profile">
             <img class="luxia-gnb-container__profile-image" src="assets/icons/profile_man.svg" />
@@ -154,144 +154,78 @@
           <!-- [each route pages]----------------------------------------------------------------------------------- -->
           <section class="luxia-layout-container__body-section">
             <div class="luxia-jumbotron-container">
-              <h1 class="luxia-jumbotron-container__title">LUXIA Chat</h1>
-              <div class="luxia-jumbotron-container__description">대화형 AI 검색으로 쉽고 빠르게 찾아보세요!</div>
+              <h1 class="luxia-jumbotron-container__title">LUXIA Docs</h1>
+              <div class="luxia-jumbotron-container__description">
+                문서를 간략히 요약하고, 심화된 질문을 탐구하세요!
+              </div>
             </div>
             <!-- [LUXIA Chat Intro (주요이슈, 질문추천)]----------------------------------------------------------------- -->
-            <div id="luxiaChatIntro" class="luxia-chat-container active">
-              <div class="luxia-chat-container__cover">
-                <div class="luxia-chat-container__cover-tab">
+            <div id="luxiaChatIntro" class="luxia-docs-container active">
+              <div class="luxia-docs-container__cover">
+                <div class="luxia-docs-container__cover-tab">
                   <!--/* [D] tab buttons */-->
                   <!--/* [D] data-target-content: target content의 '#id' */-->
                   <button
-                    data-target-content="#luxia_chat_2024122400"
-                    class="tab-button luxia-chat-container__cover-tab-btn active"
+                    data-target-content="#luxia_docs_2024122400"
+                    class="tab-button luxia-docs-container__cover-tab-btn active"
                   >
-                    주요이슈
+                    파일
                   </button>
                   <button
-                    data-target-content="#luxia_chat_2024122401"
-                    class="tab-button luxia-chat-container__cover-tab-btn"
+                    data-target-content="#luxia_docs_2024122401"
+                    class="tab-button luxia-docs-container__cover-tab-btn"
                   >
-                    질문추천
+                    Url
+                  </button>
+                  <button
+                    data-target-content="#luxia_docs_2024122402"
+                    class="tab-button luxia-docs-container__cover-tab-btn"
+                  >
+                    Text
                   </button>
                 </div>
-                <div class="luxia-chat-container__cover-contents">
+                <div class="luxia-docs-container__cover-contents">
                   <!--/* [D] tab content list */-->
-                  <div id="luxia_chat_2024122400" class="luxia-chat-container__cover-contents-list active">
-                    <div class="swiper-container luxia-chat-container__cover-swiper">
-                      <div class="swiper-wrapper luxia-chat-container__cover-list-wrapper">
-                        <!--/* [D] 주요이슈 list */-->
-                        <ul class="swiper-slide luxia-chat-container__cover-ul-rank">
-                          <li>
-                            <label class="badge badge-fixed">1</label>
-                            <span>제주 해상 어선 침몰 사고</span>
-                          </li>
-                          <li>
-                            <label class="badge badge-fixed">2</label>
-                            <span>손흥민 월드컵 예선전 활약</span>
-                          </li>
-                          <li>
-                            <label class="badge badge-fixed">3</label>
-                            <span>KT 3분기 영업이익 증가</span>
-                          </li>
-                          <li>
-                            <label class="badge badge-fixed">4</label>
-                            <span>애플 아이폰17 출시</span>
-                          </li>
-                          <li>
-                            <label class="badge badge-fixed">5</label>
-                            <span>김남길 열혈사제2 복귀</span>
-                          </li>
-                        </ul>
-                        <ul class="swiper-slide luxia-chat-container__cover-ul-rank">
-                          <li>
-                            <label class="badge badge-fixed">6</label>
-                            <span>미국 대선 트럼프 승리</span>
-                          </li>
-                          <li>
-                            <label class="badge badge-fixed">7</label>
-                            <span>이범호 KIA 감독 연봉</span>
-                          </li>
-                          <li>
-                            <label class="badge badge-fixed">8</label>
-                            <span>FOMC 금리 인하 영향</span>
-                          </li>
-                          <li>
-                            <label class="badge badge-fixed">9</label>
-                            <span>빅뱅 7년만에 컴백</span>
-                          </li>
-                          <li>
-                            <label class="badge badge-fixed">10</label>
-                            <span>대화형 AI 에이전트 Goover 출시</span>
-                          </li>
-                        </ul>
+                  <div class="luxia-docs-container__tab-contents">
+                    <div class="luxia-docs-container__contents-file-cover mobile-ver">
+                      <div class="guide-text">
+                        참고할 내용의 자료를 업로드 해주세요.<br />
+                        (파일 당 10MB 이하, 3개까지 업로드 가능)
+                      </div>
+                      <button class="btn btn-secondary btn-sm">
+                        <img src="assets/icons/file_upload.svg" />
+                        <span>파일 첨부하기</span>
+                      </button>
+                    </div>
+                    <div class="luxia-docs-container__contents-file-cover pc-ver">
+                      <button>
+                        <img src="assets/icons/file_upload.svg" />
+                      </button>
+                      <div class="guide-text">
+                        참고할 내용의 자료를 업로드 해주세요.<br />
+                        (파일 당 10MB 이하, 3개까지 업로드 가능)
                       </div>
                     </div>
-                    <div class="luxia-chat-container__cover-arrow">
-                      <button class="swiper-button-prev">
-                        <img src="assets/icons/chat/arrow_left.svg" />
-                      </button>
-                      <button class="swiper-button-next">
-                        <img src="assets/icons/chat/arrow_right.svg" />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div id="luxia_chat_2024122401" class="luxia-chat-container__cover-contents-list">
-                    <div class="swiper-container luxia-chat-container__cover-swiper">
-                      <div class="swiper-wrapper luxia-chat-container__cover-list-wrapper">
-                        <!--/* [D] 질문추천 list */-->
-                        <ul class="swiper-slide luxia-chat-container__cover-ul-question">
-                          <li>
-                            <span> 건강보험심사평가원 심사 업무 처리 규정이 어떻게 돼? </span>
-                          </li>
-                          <li>
-                            <span> 뉴스에서 다루는 사회적 변화 중 가장 주목할 만한 것은 어떤거야? </span>
-                          </li>
-                          <li>
-                            <span> 1인 창조기업 육성에 관한 법률을 간단하게 소개해줘. </span>
-                          </li>
-                          <li>
-                            <span> 패셔너블한 노이즈캔슬링 되는 무선헤드셋 추천해줄래? </span>
-                          </li>
-                          <li>
-                            <span> 비타민 D가 부족하면 어떤 증상을 일으킬까? </span>
-                          </li>
-                        </ul>
-                        <ul class="swiper-slide luxia-chat-container__cover-ul-question">
-                          <li>
-                            <span>미국 대선 트럼프 승리</span>
-                          </li>
-                          <li>
-                            <span>이범호 KIA 감독 연봉</span>
-                          </li>
-                          <li>
-                            <span>FOMC 금리 인하 영향</span>
-                          </li>
-                          <li>
-                            <span>빅뱅 7년만에 컴백</span>
-                          </li>
-                          <li>
-                            <span>대화형 AI 에이전트 Goover 출시</span>
-                          </li>
-                        </ul>
+                    <div class="luxia-docs-container__contents-file-list">
+                      <!--/* [D] 첨부한 파일 List */-->
+                      <div class="btn btn-download">
+                        <div class="text">
+                          <img src="assets/icons/clip.svg" />
+                          <span>CSAP 보안인증 가이드 2014.pdf</span>
+                        </div>
+                        <button class="times">
+                          <img src="assets/icons/times.svg" />
+                        </button>
                       </div>
                     </div>
-                    <div class="luxia-chat-container__cover-arrow">
-                      <button class="swiper-button-prev">
-                        <img src="assets/icons/chat/arrow_left.svg" />
-                      </button>
-                      <button class="swiper-button-next">
-                        <img src="assets/icons/chat/arrow_right.svg" />
-                      </button>
-                    </div>
                   </div>
+                  <div class="luxia-docs-container__tab-contents"></div>
+                  <div class="luxia-docs-container__tab-contents"></div>
                 </div>
               </div>
             </div>
             <!-- [Answer Section (답변, 답변참고)] --------------------------------------------------------------------- -->
-            <div id="luxiaChatAnswer" class="luxia-chat-container">
+            <div id="luxiaChatAnswer" class="luxia-docs-container">
               <div class="luxia-answer-container__cover">
                 <!-- question section -->
                 <div class="luxia-answer-container__question-section">
@@ -451,8 +385,12 @@
             </div>
           </section>
 
+          <!-- bottom button -->
+          <div class="luxia-docs-container__chat active">
+            <button class="btn btn-primary btn-lg btn-md-pc">요약하기</button>
+          </div>
           <!-- bottom chat box -->
-          <div class="luxia-chat-container__chat">
+          <div class="luxia-docs-container__chat">
             <div class="textarea-solid" tabindex="0">
               <div class="textarea-solid__inner">
                 <textarea placeholder="무엇이든 물어보세요."></textarea>
@@ -462,7 +400,7 @@
                   <button
                     type="button"
                     data-target="#selectOverlay20241230"
-                    class="jsSelectOverlays luxia-chat-container__chat-tooltip"
+                    class="jsSelectOverlays luxia-docs-container__chat-tooltip"
                   >
                     <img src="assets/icons/chat/plus.svg" />
                   </button>
@@ -492,7 +430,7 @@
                     </div>
                   </div>
                 </div>
-                <button type="button" class="btn btn-send luxia-chat-container__chat-btn">
+                <button type="button" class="btn btn-send luxia-docs-container__chat-btn">
                   <span class="blind">send button</span>
                 </button>
               </div>
@@ -502,114 +440,8 @@
       </div>
     </div>
 
-    <!--/* [D] popup-side (답변 참고) */-->
-    <div id="popupSide20241235" class="popup-side">
-      <div class="overlay-dimm"></div>
-      <div class="popup-side__inner">
-        <button type="button" class="popup-side__times">
-          <img src="assets/icons/times.svg" />
-        </button>
-        <div class="popup-side__cover">
-          <div class="popup-side__headline">
-            <div class="popup-side__title">
-              <img src="assets/icons/note.svg" />
-              <span>답변참고</span>
-            </div>
-            <div class="popup-side__description">
-              건강보험심사평가원 운영규정에서 위원회의 설치와 기능에 대해 자세히 알려줘
-            </div>
-          </div>
-          <div class="popup-side__divide"></div>
-          <div class="luxia-anwser-container__cards">
-            <div class="luxia-anwser-container__cards-set">
-              <div class="list-card card-lg">
-                <div class="eyebrow">
-                  <div class="from">
-                    <img src="assets/imgs/jungang.png" />
-                    <span>중앙일보</span>
-                  </div>
-                  <div class="buttons">
-                    <button type="button" class="luxia-anwser-container__summary-btn">요약하기</button>
-                    <div class="divide"></div>
-                    <button type="button">원문보기</button>
-                  </div>
-                </div>
-                <div class="context">
-                  <div class="title">심사평가원, 2024년도 선별집중심사 항목 공개</div>
-                  <div class="description">
-                    신규 5개 항목 포함하여 총 19개 항목 선정 - 건강보험심사평가원(원장 강중구, 이하 심사평가원)은 28일
-                    심사평가원 누리집과 요양기관 업무포탈을 통해 2024년도 선별집중심사 항목을 공개한다고 밝혔다.
-                  </div>
-                </div>
-                <div class="date">2024.12.03</div>
-              </div>
-              <div class="luxia-anwser-container__summary-cover">
-                <div class="luxia-anwser-container__summary-title">
-                  <img src="assets/icons/pencil.svg" />
-                  <span>원문을 간단히 요약했어요.</span>
-                </div>
-                <div class="luxia-anwser-container__summary-text">
-                  2024년도 선별집중심사 항목이 공개되었습니다. 총 19개를 선정하였으며, 이는 진료비 증가와 사회적 이슈
-                  등을 반영한 결과입니다. 신규항목으로는 프로칼시토닌 검사, 초음파 검사, 결장경하 종양수술, 관절조영,
-                  트로포닌 검사가 포함되어 있으며, 골다공증치료제도 관리 항목으로 확대됩니다.
-                </div>
-                <div class="divide"></div>
-              </div>
-            </div>
-            <div class="luxia-anwser-container__cards-set">
-              <div class="list-card card-lg">
-                <div class="eyebrow">
-                  <div class="from">
-                    <img src="assets/imgs/newsis.png" />
-                    <span>뉴스1</span>
-                  </div>
-                  <div class="buttons">
-                    <button type="button" class="luxia-anwser-container__summary-btn">요약하기</button>
-                    <div class="divide"></div>
-                    <button type="button">원문보기</button>
-                  </div>
-                </div>
-                <div class="context">
-                  <div class="title">서면으로 진행하는 건강보험 심판청구 분쟁조정회의</div>
-                  <div class="description">
-                    최근 이같은 내용의 '건강보험분쟁조정위원회사무국 종합감사 처분 요구서'를 공개했다.
-                    건강보험분쟁조정위원회는 요양기관이 건강보험심사평가원... 운영규정에는 위원회 회의와 관련해 구성원
-                    과반수 출석
-                  </div>
-                </div>
-                <div class="date">2024.12.03</div>
-              </div>
-            </div>
-            <div class="luxia-anwser-container__cards-set">
-              <div class="list-card card-lg">
-                <div class="eyebrow">
-                  <div class="from">
-                    <img src="assets/imgs/kbsnews.png" />
-                    <span>KBS 뉴스</span>
-                  </div>
-                  <div class="buttons">
-                    <button type="button" class="luxia-anwser-container__summary-btn">요약하기</button>
-                    <div class="divide"></div>
-                    <button type="button">원문보기</button>
-                  </div>
-                </div>
-                <div class="context">
-                  <div class="title">자동차 보험 한인과 진료비 합리화</div>
-                  <div class="description">
-                    처리 규정’ 개정안을 행정예고한다고8일 밝혔다. 이번 개정안은 최근 증가하고 있는 자동차보험 한의과
-                    진료비를 합리화하고, 한의과 진료의 품질을...
-                  </div>
-                </div>
-                <div class="date">2024.12.03</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script type="text/javascript" src="src/js/common/app.js"></script>
     <script type="text/javascript" src="src/js/common/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="src/js/pages/luxia_chat.js"></script>
+    <script type="text/javascript" src="src/js/pages/luxia_docs.js"></script>
   </body>
 </html>
