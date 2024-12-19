@@ -41,6 +41,9 @@
   --shadow-sm: 2px 2px 12px 0px rgba(1, 1, 1, 0.08);
   --shadow-md: 6px 6px 30px 0px rgba(1, 1, 1, 0.12);
   --shadow-xs: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 8px 8px 40px 0px rgba(0, 0, 0, 0.16);
+
+
 }
 
 @font-face {

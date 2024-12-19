@@ -221,7 +221,7 @@ if (sidePopupBtns && sidePopupBtns.length > 0) {
       });
 
       const targetDimm = target.querySelector(".overlay-dimm");
-      const closeBtn = target.querySelector(".times");
+      const closeBtn = target.querySelector(".popup-side__times");
       const closeSidePopup = () => {
         window.document.body.style.overflow = "";
         target.style.display = "";

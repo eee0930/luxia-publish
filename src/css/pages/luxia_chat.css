@@ -341,6 +341,7 @@
   letter-spacing: -0.02em;
   color: var(--gray-700);
   max-width: 100%;
+  cursor: pointer;
 }
 
 @media (min-width: 810px) { 
