@@ -1,25 +1,6 @@
-const luxiaChatTabBtns = document.querySelectorAll(
-  ".luxia-chat-container__cover-tab-btn"
-);
 const luxiaChatTabContents = document.querySelectorAll(
-  ".luxia-chat-container__cover-contents-list"
+  ".luxia-chat-container .content-tab-box__contents"
 );
-
-const handleClickLuxiaChatTabBtn = (ele) => {
-  const targetId = ele.dataset.targetContent;
-  const target = document.querySelector(targetId);
-  luxiaChatTabBtns.forEach((btn, i) => {
-    btn.classList.remove("active");
-    luxiaChatTabContents[i].classList.remove("active");
-  });
-  ele.classList.add("active");
-  target.classList.add("active");
-};
-if (luxiaChatTabBtns && luxiaChatTabBtns.length > 0) {
-  luxiaChatTabBtns.forEach((btn) => {
-    btn.addEventListener("click", () => handleClickLuxiaChatTabBtn(btn));
-  });
-}
 
 const luxiaChatTabSwiperList = [];
 if (luxiaChatTabContents && luxiaChatTabContents.length > 0) {

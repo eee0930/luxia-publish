@@ -1,3 +1,4 @@
+/* jumbotron */
 .luxia-jumbotron-container {
   width: 100%;
   display: flex;
@@ -28,3 +29,13 @@
     font-size: 48px;
   }
 }
+
+/* title */
+.title-style {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--main-black);
+} 

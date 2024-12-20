@@ -109,7 +109,7 @@ window.addEventListener("resize", () => {
   addClassMenuForPc();
 });
 
-// handle textarea
+// [handle textarea]-------------------------------------------------------------------
 const solidTexareaList = document.querySelectorAll(".textarea-solid");
 if (solidTexareaList && solidTexareaList.length > 0) {
   const autoResizeTextarea = (ele) => {
@@ -132,7 +132,7 @@ if (solidTexareaList && solidTexareaList.length > 0) {
   });
 }
 
-// handle overlays
+// [handle overlays]----------------------------------------------------------------
 const jsSelectOverlay = document.querySelectorAll(".jsSelectOverlays");
 if (jsSelectOverlay && jsSelectOverlay.length > 0) {
   jsSelectOverlay.forEach((btn) => {
@@ -156,7 +156,7 @@ if (jsSelectOverlay && jsSelectOverlay.length > 0) {
   });
 }
 
-// handle tooltips
+// [handle tooltips]----------------------------------------------------------------
 const jsTooltips = document.querySelectorAll(".jsTooltip");
 if (jsTooltips && jsTooltips.length > 0) {
   jsTooltips.forEach((btn) => {
@@ -198,7 +198,20 @@ if (jsTooltips && jsTooltips.length > 0) {
   });
 }
 
-// side popup
+// [handle close download button]----------------------------------------------------------------
+const downloadButtons = document.querySelectorAll(".btn-download");
+if (downloadButtons && downloadButtons.length > 0) {
+  downloadButtons.forEach((btn) => {
+    const closeBtn = btn.querySelector(".times");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        btn.style.display = "none";
+      });
+    }
+  });
+}
+
+// [side popup]-----------------------------------------------------------------------------------
 const sidePopupBtns = document.querySelectorAll(".jsSidePopup");
 if (sidePopupBtns && sidePopupBtns.length > 0) {
   sidePopupBtns.forEach((btn) => {
@@ -230,5 +243,28 @@ if (sidePopupBtns && sidePopupBtns.length > 0) {
       targetDimm.addEventListener("click", closeSidePopup);
       closeBtn.addEventListener("click", closeSidePopup);
     }
+  });
+}
+
+// handle control tab box
+const tabContentBoxes = document.querySelectorAll(".content-tab-box");
+if (tabContentBoxes && tabContentBoxes.length > 0) {
+  tabContentBoxes.forEach((tabBox) => {
+    const tabButtons = tabBox.querySelectorAll(".tab-button");
+    const tabContents = tabBox.querySelectorAll(".content-tab-box__contents");
+
+    const handleClickTabBtn = (ele) => {
+      const targetId = ele.dataset.targetContent;
+      const target = document.querySelector(targetId);
+      tabButtons.forEach((btn, i) => {
+        btn.classList.remove("active");
+        tabContents[i].classList.remove("active");
+      });
+      ele.classList.add("active");
+      target.classList.add("active");
+    };
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => handleClickTabBtn(btn));
+    });
   });
 }

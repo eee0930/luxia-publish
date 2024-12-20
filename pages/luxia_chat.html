@@ -60,7 +60,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" class="luxia-menu-container__menu-target">
+                  <a href="pages/luxia_generate.html" class="luxia-menu-container__menu-target">
                     <img src="assets/icons/menu/generate.svg" />
                     <span>LUXIA Generate</span>
                   </a>
@@ -159,26 +159,16 @@
             </div>
             <!-- [LUXIA Chat Intro (주요이슈, 질문추천)]----------------------------------------------------------------- -->
             <div id="luxiaChatIntro" class="luxia-chat-container active">
-              <div class="luxia-chat-container__cover">
-                <div class="luxia-chat-container__cover-tab">
+              <div class="content-tab-box">
+                <div class="tab-button-family">
                   <!--/* [D] tab buttons */-->
                   <!--/* [D] data-target-content: target content의 '#id' */-->
-                  <button
-                    data-target-content="#luxia_chat_2024122400"
-                    class="tab-button luxia-chat-container__cover-tab-btn active"
-                  >
-                    주요이슈
-                  </button>
-                  <button
-                    data-target-content="#luxia_chat_2024122401"
-                    class="tab-button luxia-chat-container__cover-tab-btn"
-                  >
-                    질문추천
-                  </button>
+                  <button data-target-content="#luxia_chat_2024122400" class="tab-button active">주요이슈</button>
+                  <button data-target-content="#luxia_chat_2024122401" class="tab-button">질문추천</button>
                 </div>
-                <div class="luxia-chat-container__cover-contents">
+                <div class="content-tab-box__inner">
                   <!--/* [D] tab content list */-->
-                  <div id="luxia_chat_2024122400" class="luxia-chat-container__cover-contents-list active">
+                  <div id="luxia_chat_2024122400" class="content-tab-box__contents active">
                     <div class="swiper-container luxia-chat-container__cover-swiper">
                       <div class="swiper-wrapper luxia-chat-container__cover-list-wrapper">
                         <!--/* [D] 주요이슈 list */-->
@@ -238,7 +228,7 @@
                     </div>
                   </div>
 
-                  <div id="luxia_chat_2024122401" class="luxia-chat-container__cover-contents-list">
+                  <div id="luxia_chat_2024122401" class="content-tab-box__contents">
                     <div class="swiper-container luxia-chat-container__cover-swiper">
                       <div class="swiper-wrapper luxia-chat-container__cover-list-wrapper">
                         <!--/* [D] 질문추천 list */-->
@@ -314,7 +304,7 @@
                 <div class="luxia-answer-container__reference-section">
                   <div class="luxia-answer-container__reference-title-section">
                     <div class="luxia-answer-container__reference-title-cover">
-                      <h3 class="luxia-answer-container__reference-title">답변참고</h3>
+                      <h3 class="title-style">답변참고</h3>
                       <!-- [D] 답변 참고 갯수 -->
                       <label class="badge">249</label>
                     </div>

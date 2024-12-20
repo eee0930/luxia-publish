@@ -60,7 +60,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" class="luxia-menu-container__menu-target">
+                  <a href="pages/luxia_generate.html" class="luxia-menu-container__menu-target">
                     <img src="assets/icons/menu/generate.svg" />
                     <span>LUXIA Generate</span>
                   </a>
@@ -161,33 +161,18 @@
             </div>
             <!-- [LUXIA Chat Intro (주요이슈, 질문추천)]----------------------------------------------------------------- -->
             <div id="luxiaDocsIntro" class="luxia-docs-container active">
-              <div class="luxia-docs-container__cover">
-                <div class="luxia-docs-container__cover-tab">
+              <div class="content-tab-box">
+                <div class="tab-button-family">
                   <!--/* [D] tab buttons */-->
                   <!--/* [D] data-target-content: target content의 '#id' */-->
-                  <button
-                    data-target-content="#luxia_docs_2024122400"
-                    class="tab-button luxia-docs-container__cover-tab-btn active"
-                  >
-                    파일
-                  </button>
-                  <button
-                    data-target-content="#luxia_docs_2024122401"
-                    class="tab-button luxia-docs-container__cover-tab-btn"
-                  >
-                    Url
-                  </button>
-                  <button
-                    data-target-content="#luxia_docs_2024122402"
-                    class="tab-button luxia-docs-container__cover-tab-btn"
-                  >
-                    Text
-                  </button>
+                  <button data-target-content="#luxia_docs_2024122400" class="tab-button active">파일</button>
+                  <button data-target-content="#luxia_docs_2024122401" class="tab-button">Url</button>
+                  <button data-target-content="#luxia_docs_2024122402" class="tab-button">Text</button>
                 </div>
-                <div class="luxia-docs-container__cover-contents">
+                <div class="content-tab-box__inner">
                   <!--/* [D] tab content list */-->
-                  <div id="luxia_docs_2024122400" class="luxia-docs-container__tab-contents active">
-                    <div class="luxia-docs-container__contents-file-cover mobile-ver">
+                  <div id="luxia_docs_2024122400" class="content-tab-box__contents active">
+                    <div class="content-tab-box__contents-file-cover mobile-ver">
                       <div class="guide-text">
                         참고할 내용의 자료를 업로드 해주세요.<br />
                         (파일 당 10MB 이하, 3개까지 업로드 가능)
@@ -197,7 +182,7 @@
                         <span>파일 첨부하기</span>
                       </button>
                     </div>
-                    <div class="luxia-docs-container__contents-file-cover pc-ver">
+                    <div class="content-tab-box__contents-file-cover pc-ver">
                       <button>
                         <img src="assets/icons/file_upload.svg" />
                       </button>
@@ -206,7 +191,7 @@
                         (파일 당 10MB 이하, 3개까지 업로드 가능)
                       </div>
                     </div>
-                    <div class="luxia-docs-container__contents-file-list">
+                    <div class="content-tab-box__contents-file-list">
                       <!--/* [D] 첨부한 파일 List */-->
                       <div class="btn btn-download">
                         <div class="text">
@@ -219,8 +204,8 @@
                       </div>
                     </div>
                   </div>
-                  <div id="luxia_docs_2024122401" class="luxia-docs-container__tab-contents"></div>
-                  <div id="luxia_docs_2024122402" class="luxia-docs-container__tab-contents"></div>
+                  <div id="luxia_docs_2024122401" class="content-tab-box__contents"></div>
+                  <div id="luxia_docs_2024122402" class="content-tab-box__contents"></div>
                 </div>
               </div>
             </div>
@@ -236,7 +221,7 @@
                     </div>
                   </div>
                   <div class="luxia-answer-container__question-refer">
-                    <div class="luxia-answer-container__question-refer-title">대상문서</div>
+                    <div class="title-style">대상문서</div>
                     <div class="btn btn-download">
                       <div class="text">
                         <img src="assets/icons/clip.svg" />
@@ -383,7 +368,6 @@
     </div>
 
     <script type="text/javascript" src="src/js/common/app.js"></script>
-    <script type="text/javascript" src="src/js/common/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="src/js/pages/luxia_docs.js"></script>
   </body>
 </html>
