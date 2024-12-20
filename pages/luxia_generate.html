@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LUXIA</title>
-    <base href="" />
+    <title>LUXIA Chat | LUXIA</title>
+    <base href="../" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
     <link rel="stylesheet" href="src/css/common/style.css" />
-    <link rel="stylesheet" href="src/css/pages/home.css" />
+    <link rel="stylesheet" href="src/css/pages/luxia_generate.css" />
   </head>
   <body>
     <div class="luxia-layout-container menu-active-pc">
@@ -78,7 +78,7 @@
                     <object data="assets/icons/menu/bubble_chat.svg" type="image/svg+xml"></object>
                     <span>Custom chat</span>
                   </div>
-                  <a href="" class="luxia-menu-container__sub-title-more"> 더보기 </a>
+                  <a href="#" class="luxia-menu-container__sub-title-more"> 더보기 </a>
                 </div>
                 <ul class="luxia-menu-container__sub-menu">
                   <li>
@@ -109,7 +109,7 @@
                     <object data="assets/icons/menu/edit_pencil.svg" type="image/svg+xml"></object>
                     <span>Recents</span>
                   </div>
-                  <a href="" class="luxia-menu-container__sub-title-more"> 더보기 </a>
+                  <a href="#" class="luxia-menu-container__sub-title-more"> 더보기 </a>
                 </div>
                 <ul class="luxia-menu-container__sub-menu">
                   <li>
@@ -143,116 +143,113 @@
                 <span>Ask LUXIA</span>
               </div>
             </div>
-            <div class="luxia-gnb-container-menu-name">Today’s Pick</div>
+            <div class="luxia-gnb-container-menu-name">LUXIA Generate</div>
           </div>
           <div class="luxia-gnb-container__profile">
-            <img class="luxia-gnb-container__profile-image" src="assets/icons/default_profile.svg" />
+            <img class="luxia-gnb-container__profile-image" src="assets/icons/profile_man.svg" />
             <span class="luxia-gnb-container__profile-nickname"> 룩시아님 </span>
           </div>
         </header>
         <div class="luxia-layout-container__body">
           <!-- [each route pages]----------------------------------------------------------------------------------- -->
           <section class="luxia-layout-container__body-section">
-            <!-- import jumbotron.html -->
-            <div class="luxia-jumbotron-container">
-              <h1 class="luxia-jumbotron-container__title">Today’s Pick</h1>
-              <div class="luxia-jumbotron-container__description">
-                오늘의 주제를 확인하고, 관심 있는 내용을
-                <br class="is-mo" />
-                빠르고 쉽게 알아보세요!
-              </div>
-            </div>
-            <div class="card-family">
-              <!--/* [D] start of Today's Pick Card list */-->
-              <!-- card type 1 -->
-              <div class="card type-1">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/1.png" alt="직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">뉴스저널리즘</div>
-                      <h5 class="card__info-title">직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%</h5>
-                      <div class="card__info-description">
-                        내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로 결정됐다. 건강보험정책심의위원회(건정심)는
-                        이와 같은 내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로
-                      </div>
+            <div class="luxia-generate-container">
+              <div class="luxia-generate-container__steps">
+                <div class="step-family">
+                  <div class="step step-active">
+                    <div class="step-box">
+                      <img src="assets/icons/generate/pencil_line.svg" />
                     </div>
-                    <div class="card__info-date">2024.12.04</div>
+                    <div class="title">참고내용</div>
+                  </div>
+                  <div class="chevron"></div>
+                  <div class="step">
+                    <div class="step-box">
+                      <img src="assets/icons/generate/examine.svg" />
+                    </div>
+                    <div class="title">목차검토</div>
+                  </div>
+                  <div class="chevron"></div>
+                  <div class="step">
+                    <div class="step-box">
+                      <img src="assets/icons/generate/book_result.svg" />
+                    </div>
+                    <div class="title">작성결과</div>
                   </div>
                 </div>
               </div>
-              <!-- card type 2 -->
-              <div class="card type-2">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/2.png" alt="'벌써 신경전'...넷플 흑백 요리사 시즌2 참가자 모집" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">매일경제</div>
-                      <h5 class="card__info-title">“벌써 신경전”...넷플 흑백 요리사 시즌2 참가자 모집</h5>
-                      <div class="card__info-description">
-                        넷플릭스가 예능 ‘흑백요리사: 요리 계급 전쟁’ 시즌2 참가자 모집을 알렸다.
+              <div class="luxia-generate-container__cover active">
+                <div class="luxia-generate-container__text-field">
+                  <h3 class="title-style">작성내용</h3>
+                  <div class="textarea-line">
+                    <textarea placeholder="텍스트 입력"></textarea>
+                  </div>
+                </div>
+                <div class="content-tab-box">
+                  <div class="tab-button-family">
+                    <!--/* [D] tab buttons */-->
+                    <!--/* [D] data-target-content: target content의 '#id' */-->
+                    <button data-target-content="#luxia_docs_2024122400" class="tab-button active">파일</button>
+                    <button data-target-content="#luxia_docs_2024122401" class="tab-button">Url</button>
+                    <button data-target-content="#luxia_docs_2024122402" class="tab-button">Text</button>
+                  </div>
+                  <div class="content-tab-box__inner">
+                    <!--/* [D] tab content list */-->
+                    <div id="luxia_docs_2024122400" class="content-tab-box__contents active">
+                      <div class="content-tab-box__contents-file-cover mobile-ver">
+                        <div class="guide-text">
+                          참고할 내용의 자료를 업로드 해주세요.<br />
+                          (파일 당 10MB 이하, 3개까지 업로드 가능)
+                        </div>
+                        <button class="btn btn-secondary btn-sm">
+                          <img src="assets/icons/file_upload.svg" />
+                          <span>파일 첨부하기</span>
+                        </button>
+                      </div>
+                      <div class="content-tab-box__contents-file-cover pc-ver">
+                        <button>
+                          <img src="assets/icons/file_upload.svg" />
+                        </button>
+                        <div class="guide-text">
+                          참고할 내용의 자료를 업로드 해주세요.<br />
+                          (파일 당 10MB 이하, 3개까지 업로드 가능)
+                        </div>
+                      </div>
+                      <div class="content-tab-box__contents-file-list">
+                        <!--/* [D] 첨부한 파일 List */-->
+                        <div class="btn btn-download">
+                          <div class="text">
+                            <img src="assets/icons/clip.svg" />
+                            <span>CSAP 보안인증 가이드 2014.pdf</span>
+                          </div>
+                          <button class="times">
+                            <img src="assets/icons/times.svg" />
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div class="card__info-date">2024.12.03</div>
+                    <div id="luxia_docs_2024122401" class="content-tab-box__contents"></div>
+                    <div id="luxia_docs_2024122402" class="content-tab-box__contents"></div>
                   </div>
                 </div>
               </div>
-              <!-- card type 3 -->
-              <div class="card type-3">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/3.png" alt="주식시장 정상 개장…당국, 금융상황 점검회의 개최" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">세계일보</div>
-                      <h5 class="card__info-title">주식시장 정상 개장…당국, 금융상황 점검회의 개최</h5>
-                      <div class="card__info-description">
-                        4일 금융위원회와 한국거래소 등에 따르면, 이날 코스피와 코스닥 등 국내 주식시장은 오전 9시 정상
-                        개장하기로 했다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.04</div>
-                  </div>
-                </div>
-              </div>
-              <!-- card type 2 -->
-              <div class="card type-2">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/4.png" alt="한국, 2025년 2월 데이비스컵 테니스 대회서 체코와 격돌" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">연합뉴스</div>
-                      <h5 class="card__info-title">한국, 2025년 2월 데이비스컵 테니스 대회서 체코와 격돌</h5>
-                      <div class="card__info-description">
-                        한국 남자 테니스 대표팀이 국가대항전인 데이비스컵 2025시즌 파이널스 진출전(Qualifiers) 1회전에서
-                        체코를 상대하게 됐다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.03</div>
-                  </div>
-                </div>
-              </div>
-              <!-- card type 4 -->
-              <div class="card type-4">
-                <div class="card-cover">
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">매일경제</div>
-                      <h5 class="card__info-title">“AI시대, 자동화가 반도체 설계 판을 바꾼다”</h5>
-                      <div class="card__info-description">
-                        “반도체 설계 자동화(Electronic Design Auto mation·EDA) 기술을 보유한 반도체 기업이 인공지능(AI)
-                        시대 승자가 될 것이다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.04</div>
-                  </div>
-                </div>
+              <div class="luxia-generate-container__cover"></div>
+              <div class="luxia-generate-container__cover"></div>
+              <div class="luxia-generate-container__buttons">
+                <button id="luxiaGeneratePrevBtn" class="btn btn-secondary btn-sm" disabled>
+                  <span>이전</span>
+                </button>
+                <button id="luxiaGenerateNextBtn" class="btn btn-primary btn-sm">
+                  <span>다음</span>
+                </button>
               </div>
             </div>
           </section>
         </div>
       </div>
     </div>
-    <script src="src/js/common/app.js"></script>
-    <script src="src/js/pages/home.js"></script>
+
+    <script type="text/javascript" src="src/js/common/app.js"></script>
+    <script type="text/javascript" src="src/js/pages/luxia_generate.js"></script>
   </body>
 </html>

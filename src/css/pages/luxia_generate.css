@@ -1,0 +1,33 @@
+.luxia-generate-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.luxia-generate-container__steps {
+  width: 100%;
+  margin-bottom: 48px;
+}
+.luxia-generate-container__cover {
+  display: none;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+  &.active {
+    display: flex;
+  }
+}
+.luxia-generate-container__text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.luxia-generate-container__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  .btn:disabled {
+    visibility: hidden;
+  }
+}
