@@ -154,8 +154,13 @@
     right: 0;
     bottom: 0;
     background-color: var(--main-black);
-    opacity: 0.7;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.3s ease-in;
   }
+}
+.popup-side.open .overlay-dimm {
+  opacity: 0.7;
 }
 .popup-side__inner {
   position: absolute;
@@ -233,7 +238,7 @@
     opacity: 1;
     transform: translateX(100%);
     will-change: transform;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.5s cubic-bezier(0.46, 0.03, 0.44, 0.94);
     padding: 40px;
     gap: 40px;
   }
@@ -267,8 +272,13 @@
     right: 0;
     bottom: 0;
     background-color: var(--main-black);
-    opacity: 0.7;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.3s ease-in-out;
   }
+}
+.popup.open .overlay-dimm {
+  opacity: 0.7;
 }
 .popup__inner {
   position: absolute;

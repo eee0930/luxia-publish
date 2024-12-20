@@ -26,15 +26,19 @@
   width: 100%;
 }
 .luxia-docs-container__tab-contents {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 12px;
   width: 100%;
+  &.active {
+    display: flex;
+  }
 }
 .luxia-docs-container__contents-file-cover {
   width: 100%;
   padding: 32px 16px;
   flex-direction: column;
+  display: flex;
   align-items: center;
   gap: 12px;
   border-radius: 12px;
@@ -66,7 +70,7 @@
 
 
 
-.luxia-docs-container__chat {
+.luxia-docs-container__bottom {
   display: none;
   position: sticky;
   bottom: 0;
@@ -79,6 +83,9 @@
     display: flex;
   }
   .btn-primary {
+    width: 100%;
+  }
+  .textarea-solid {
     width: 100%;
   }
 }
@@ -120,7 +127,7 @@
     }
   } 
 
-  .luxia-docs-container__chat {
+  .luxia-docs-container__bottom {
     padding: 0 0 24px;
     z-index: 50;
     width: 100%;
@@ -156,57 +163,37 @@
   gap: 16px;
   align-items: start;
 }
-.luxia-answer-container__question-profile {
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
+
+.luxia-answer-container__question-info {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: start;
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    width: 16px;
   }
 }
 .luxia-answer-container__question {
   flex: 1 0 0%;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
   letter-spacing: -0.02em;
-  color: var(--main-black);
-  padding-top: 3px;
+  color: var(--primary-500);
 }
-
-.luxia-answer-container__reference-section {
+.luxia-answer-container__question-refer {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.luxia-answer-container__reference-title-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.luxia-answer-container__reference-title-cover {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-}
-.luxia-answer-container__reference-title {
+.luxia-answer-container__question-refer-title {
+  color: var(--main-black);
   font-size: 18px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.02em;
-  color: var(--main-black);
 }
-.luxia-answer-container__reference-list .swiper-wrapper {
-  display: flex;
-  .swiper-slide {
-    flex: auto 0 0;
-  }
-}
+
 .luxia-answer-container__answer-inner {
   display: flex;
   flex-direction: column;
@@ -332,7 +319,16 @@
     margin-bottom: 56px;
   }
   .luxia-answer-container__question-section {
-    gap: 40px;
+    gap: 24px;
+  }
+  .luxia-answer-container__question-info img {
+    width: 20px;
+  }
+  .luxia-answer-container__question {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
   }
   .luxia-answer-container__answer-inner {
     gap: 40px;
@@ -342,63 +338,3 @@
   }
 }
 
-/* side popup */
-.luxia-anwser-container__cards, .luxia-anwser-container__cards-set {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  width: 100%;
-}
-.luxia-anwser-container__cards-set .divide {
-  margin: 32px 0 24px;
-  width: 100%;
-  border-bottom: 1px solid var(--gray-300);
-}
-.luxia-anwser-container__summary-cover {
-  display: none;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  height: 0;
-  will-change: display, height;
-  transition: height 0.3s ease;
-  &.show {
-    display: flex;
-  }
-}
-.luxia-anwser-container__summary-title,
-.luxia-anwser-container__summary-text  {
-  padding-right: 32px;
-  padding-left: 12px;
-}
-.luxia-anwser-container__summary-title {
-  display: flex;
-  gap: 4px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  color: var(--primary-500);
-  img, svg {
-    width: 16px;
-    height: 16px;
-  }
-}
-.luxia-anwser-container__summary-text {
-  width: 100%;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: -0.02em;
-  color: var(--gray-700);
-}
-@media (min-width: 810px) {
-  .luxia-anwser-container__summary-title {
-    font-size: 16px;
-    img, svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-}

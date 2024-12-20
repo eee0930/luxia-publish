@@ -208,8 +208,8 @@ if (sidePopupBtns && sidePopupBtns.length > 0) {
       btn.addEventListener("click", () => {
         const isOpen = target.classList.contains("open");
         if (isOpen) {
-          window.document.body.style.overflow = "";
           target.style.display = "";
+          window.document.body.style.overflow = "";
           target.classList.remove("open");
         } else {
           window.document.body.style.overflow = "hidden";
