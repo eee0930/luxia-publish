@@ -1,0 +1,72 @@
+.luxia-custom-chat__search-cover {
+  width: 100%;
+}
+.luxia-custom-chat__custom-box-cover {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.luxia-custom-chat__custom-box-button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.luxia-custom-chat__pin svg path {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+.luxia-custom-chat__pin.pinned svg path {
+  fill: var(--main-black);
+  stroke: var(--main-black);
+}
+
+@media (min-width: 810px) {
+  .luxia-custom-chat__custom-box-cover {
+    gap: 24px;
+  }
+}
+
+/* popup */
+.luxia-custom-chat__card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .luxia-custom-chat__card-info-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .luxia-custom-chat__card-info-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--main-black);
+  }
+  .luxia-custom-chat__card-info-description { 
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--gray-700);    
+  }
+  .luxia-custom-chat__card-info-owner {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--gray-500);
+  }
+}
+.luxia-custom-chat__chat-example-cover, .luxia-custom-chat__chat-example {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.luxia-custom-chat__chat-example {
+  gap: 8px;
+}

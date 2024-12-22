@@ -292,20 +292,6 @@
   align-items: end;
   width: 100%;
 }
-.luxia-answer-container__recommand-list {
-  width: max-content;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: solid 1px var(--gray-300);
-  background-color: var(--main-white);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  color: var(--gray-700);
-  max-width: 100%;
-  cursor: pointer;
-}
 
 @media (min-width: 810px) { 
   .luxia-answer-container__cover {

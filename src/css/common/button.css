@@ -62,6 +62,10 @@
     padding: 0 10px;
   }
 }
+.btn-100 {
+  max-width: unset;
+  width: 100%;
+}
 @media (min-width: 810px) {
   .btn-lg-pc {
     height: 56px;
