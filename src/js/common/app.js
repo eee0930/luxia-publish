@@ -268,3 +268,76 @@ if (tabContentBoxes && tabContentBoxes.length > 0) {
     });
   });
 }
+
+// handle control sticky popup
+const stickyPopupBtn = document.querySelectorAll(".jsStickyPopup");
+if (stickyPopupBtn && stickyPopupBtn.length > 0) {
+  stickyPopupBtn.forEach((btn) => {
+    const targetId = btn.dataset.targetPopup;
+    const exceptTargetInfo = btn.dataset.targetExcept;
+    const target = document.querySelector(targetId);
+    const exceptTarget = btn.querySelector(exceptTargetInfo);
+    const popupInner = target?.querySelector(".sticky-popup__inner");
+    const closeSlideBar = target?.querySelector(".close-slide-bar");
+    const closeSidePopup = () => {
+      window.document.body.style.overflow = "";
+      target.style.display = "";
+      target.classList.remove("open");
+    };
+
+    if (target) {
+      btn.addEventListener("click", (e) => {
+        if (exceptTarget && exceptTarget.contains(e.target)) return;
+        const isOpen = target.classList.contains("open");
+        if (isOpen) {
+          target.style.display = "";
+          window.document.body.style.overflow = "";
+          target.classList.remove("open");
+        } else {
+          window.document.body.style.overflow = "hidden";
+          target.style.display = "block";
+          setTimeout(() => {
+            target.classList.add("open");
+          }, 50);
+        }
+      });
+      const targetDimm = target.querySelector(".overlay-dimm");
+
+      targetDimm.addEventListener("click", closeSidePopup);
+    }
+    if (closeSlideBar && popupInner) {
+      const width = window.innerWidth;
+      let startY = 0;
+      let currentY = 0;
+      let isDragging = false;
+
+      if (width < 810) {
+        closeSlideBar.addEventListener("touchstart", (e) => {
+          startY = e.touches[0].clientY;
+          isDragging = true;
+          popupInner.style.transition = "none"; // 애니메이션 비활성화
+        });
+
+        closeSlideBar.addEventListener("touchmove", (e) => {
+          if (!isDragging) return;
+          currentY = e.touches[0].clientY - startY;
+          if (currentY > 0) {
+            popupInner.style.transform = `translateY(${currentY}px)`;
+          }
+        });
+
+        closeSlideBar.addEventListener("touchend", () => {
+          isDragging = false;
+          if (currentY > 100) {
+            closeSidePopup();
+            popupInner.style.transform = "";
+          } else {
+            popupInner.style.transform = "translateY(0)";
+          }
+        });
+      } else {
+        closeSlideBar.addEventListener("click", closeSidePopup);
+      }
+    }
+  });
+}
