@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom chat 탐색 | LUXIA</title>
+    <base href="../" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+    <link rel="stylesheet" href="src/css/common/style.css" />
+    <link rel="stylesheet" href="src/css/pages/custom_chat.css" />
+  </head>
+  <body>
+    <div class="luxia-layout-container menu-active-pc">
+      <div class="luxia-layout-container__menu">
+        <!-- [menu.html]-------------------------------------------------------------------------------------------- -->
+        <div class="luxia-menu-container">
+          <div class="luxia-menu-container__dimm"></div>
+          <div class="luxia-menu-container__inner">
+            <div class="luxia-menu-container__head">
+              <div class="luxia-menu-container__head-button">
+                <button class="luxia-menu-container__button" type="button">
+                  <img src="assets/icons/menu/menu.svg" />
+                </button>
+              </div>
+              <div class="luxia-menu-container__head-logo">
+                <img src="assets/icons/logo.svg" />
+                <span>Ask LUXIA</span>
+              </div>
+              <div class="luxia-menu-container__head-button-pc">
+                <button type="button" class="luxia-menu-container__button-pc">
+                  <img class="luxia-menu-container__head-button-close" src="assets/icons/menu/arrow_in.svg" />
+                  <img class="luxia-menu-container__head-button-open" src="assets/icons/menu/arrow_out.svg" />
+                </button>
+              </div>
+            </div>
+            <div class="luxia-menu-container__cover">
+              <ul class="luxia-menu-container__menu">
+                <li>
+                  <a href="index.html" class="luxia-menu-container__menu-target">
+                    <img src="assets/icons/menu/home.svg" />
+                    <span>Ask Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html" class="luxia-menu-container__menu-target">
+                    <img src="assets/icons/menu/today.svg" />
+                    <span>Today's Pick</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="pages/luxia_chat.html" class="luxia-menu-container__menu-target">
+                    <img src="assets/icons/menu/chat.svg" />
+                    <span>LUXIA Chat</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="pages/luxia_docs.html" class="luxia-menu-container__menu-target">
+                    <img src="assets/icons/menu/docs.svg" />
+                    <span>LUXIA Docs</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="pages/luxia_generate.html" class="luxia-menu-container__menu-target">
+                    <img src="assets/icons/menu/generate.svg" />
+                    <span>LUXIA Generate</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="pages/custom_chat.html" class="luxia-menu-container__menu-target">
+                    <img src="assets/icons/menu/setting.svg" />
+                    <span>Custom chat 탐색</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="luxia-menu-container__sub">
+                <div class="luxia-menu-container__sub-title">
+                  <div class="luxia-menu-container__sub-title-name">
+                    <object data="assets/icons/menu/bubble_chat.svg" type="image/svg+xml"></object>
+                    <span>Custom chat</span>
+                  </div>
+                  <a href="#" class="luxia-menu-container__sub-title-more"> 더보기 </a>
+                </div>
+                <ul class="luxia-menu-container__sub-menu">
+                  <li>
+                    <a href="" class="luxia-menu-container__sub-menu-target">
+                      <span>메뉴얼 안내</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="luxia-menu-container__sub-menu-target">
+                      <span>상담내용 요약</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="luxia-menu-container__sub-menu-target">
+                      <span>답변 문구 생성</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="luxia-menu-container__sub-menu-target">
+                      <span>텍스트 번역</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="luxia-menu-container__sub">
+                <div class="luxia-menu-container__sub-title">
+                  <div class="luxia-menu-container__sub-title-name">
+                    <object data="assets/icons/menu/edit_pencil.svg" type="image/svg+xml"></object>
+                    <span>Recents</span>
+                  </div>
+                  <a href="#" class="luxia-menu-container__sub-title-more"> 더보기 </a>
+                </div>
+                <ul class="luxia-menu-container__sub-menu">
+                  <li>
+                    <a href="" class="luxia-menu-container__sub-menu-target">
+                      <span>심사평가원, 2024년도 선별짐중사항목 공개</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="luxia-menu-container__sub-menu-target">
+                      <span>금투세 폐지에 따른</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="luxia-layout-container__section">
+        <!-- [gnb.html]--------------------------------------------------------------------------------------------- -->
+        <header class="luxia-gnb-container">
+          <div class="luxia-gnb-container__head">
+            <div class="luxia-gnb-container__head-title">
+              <div class="luxia-gnb-container__head-button">
+                <button class="luxia-gnb-container__button" type="button">
+                  <img src="assets/icons/menu/menu.svg" />
+                </button>
+              </div>
+              <div class="luxia-gnb-container__head-logo">
+                <img src="assets/icons/logo.svg" />
+                <span>Ask LUXIA</span>
+              </div>
+            </div>
+            <div class="luxia-gnb-container-menu-name">Custom chat 탐색</div>
+          </div>
+          <div class="luxia-gnb-container__profile">
+            <img class="luxia-gnb-container__profile-image" src="assets/icons/profile_man.svg" />
+            <span class="luxia-gnb-container__profile-nickname"> 룩시아님 </span>
+          </div>
+        </header>
+        <div class="luxia-layout-container__body">
+          <!-- [each route pages]----------------------------------------------------------------------------------- -->
+          <section class="luxia-layout-container__body-section">
+            <div class="luxia-custom-chat__container">
+              <form>
+                <div class="form-family">
+                  <label class="form-label">이름</label>
+                  <div class="input-text input-sm">
+                    <input type="text" placeholder="이 Chat의 이름을 입력하세요." />
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">설명</label>
+                  <div class="input-text input-sm">
+                    <input type="text" placeholder="이 Chat의 용도에 대한 짧은 설명을 입력하세요." />
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">지침</label>
+                  <div class="textarea-line">
+                    <textarea
+                      placeholder="이 Chat의 용도와 작동 방식, 해서는 안 되는 것 등 대화 지침을 입력하세요."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">대화예시</label>
+                  <div class="input-text input-sm">
+                    <input type="text" placeholder="입력 가능한 예시 문장을 입력하세요." />
+                    <img src="assets/icons/chat/add-small.svg" />
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">참고지식</label>
+                  <div class="input-family">
+                    <div class="input-text input-sm">
+                      <input type="search" placeholder="대화에 참고할 지식을 선택하세요." />
+                    </div>
+                    <button type="button" class="btn btn-secondary">찾아보기</button>
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">모델설정</label>
+                  <div class="input-text input-sm">
+                    <select>
+                      <option value="">사용할 모델을 선택하세요</option>
+                      <option value="model1">model1</option>
+                      <option value="model2">model2</option>
+                      <option value="model3">model3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">기타설정</label>
+                  <div class="radio-list-family">
+                    <label class="radio-family">
+                      <span>웹 검색</span>
+                      <input type="checkbox" class="radio" checked />
+                    </label>
+                    <label class="radio-family">
+                      <span>공개 설정</span>
+                      <input type="checkbox" class="radio" checked />
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="src/js/common/app.js"></script>
+    <script type="text/javascript" src="src/js/pages/custom_chat.js"></script>
+  </body>
+</html>

@@ -70,3 +70,17 @@
 .luxia-custom-chat__chat-example {
   gap: 8px;
 }
+
+/* add custom chat */
+.luxia-custom-chat__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
