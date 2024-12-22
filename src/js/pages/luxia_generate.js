@@ -1,5 +1,7 @@
 const luxiaGenerateNextBtn = document.querySelector("#luxiaGenerateNextBtn");
 const luxiaGeneratePrevBtn = document.querySelector("#luxiaGeneratePrevBtn");
+const luxiaGenerateSaveBtn = document.querySelector("#luxiaGenerateSaveBtn");
+
 const luxiaGenerateContents = document.querySelectorAll(
   ".luxia-generate-container__cover"
 );
@@ -8,6 +10,20 @@ const luxiaGenerateSteps = document.querySelectorAll(
 );
 let nowGenerateStep = 0;
 
+const displayButtons = () => {
+  if (nowGenerateStep > 0) {
+    luxiaGeneratePrevBtn.removeAttribute("disabled");
+  } else {
+    luxiaGeneratePrevBtn.setAttribute("disabled", true);
+  }
+  if (nowGenerateStep >= luxiaGenerateContents.length - 1) {
+    luxiaGenerateSaveBtn.style.display = "";
+    luxiaGenerateNextBtn.style.display = "none";
+  } else {
+    luxiaGenerateSaveBtn.style.display = "none";
+    luxiaGenerateNextBtn.style.display = "";
+  }
+};
 if (luxiaGeneratePrevBtn && luxiaGenerateNextBtn && luxiaGenerateContents) {
   luxiaGenerateNextBtn.addEventListener("click", () => {
     if (nowGenerateStep === luxiaGenerateContents.length - 1) return;
@@ -20,9 +36,7 @@ if (luxiaGeneratePrevBtn && luxiaGenerateNextBtn && luxiaGenerateContents) {
     luxiaGenerateSteps[nowGenerateStep + 1].classList.add("step-active");
 
     nowGenerateStep++;
-    if (nowGenerateStep > 0) {
-      luxiaGeneratePrevBtn.removeAttribute("disabled");
-    }
+    displayButtons();
   });
 
   luxiaGeneratePrevBtn.addEventListener("click", () => {
@@ -36,8 +50,6 @@ if (luxiaGeneratePrevBtn && luxiaGenerateNextBtn && luxiaGenerateContents) {
     luxiaGenerateSteps[nowGenerateStep - 1].classList.add("step-active");
 
     nowGenerateStep--;
-    if (nowGenerateStep === 0) {
-      luxiaGeneratePrevBtn.setAttribute("disabled", true);
-    }
+    displayButtons();
   });
 }
