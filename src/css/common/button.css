@@ -105,12 +105,6 @@
 .btn-primary {
   background-color: var(--main-black);
   color: var(--main-white);
-  &:hover {
-    background-color: var(--gray-900);
-  }
-  &:focus {
-    background-color: var(--gray-800);
-  }
   &:disabled {
     background-color: var(--gray-100);
     color: var(--gray-500);
@@ -119,12 +113,6 @@
 .btn-secondary {
   background-color: var(--gray-100);
   color: var(--main-black);
-  &:hover {
-    background-color: var(--gray-200);
-  }
-  &:focus {
-    background-color: var(--gray-300);
-  }
   &:disabled {
     background-color: var(--gray-300);
   }
@@ -133,12 +121,6 @@
   background-color: var(--main-white);
   border: solid 1px var(--gray-300);
   color: var(--main-black);
-  &:hover {
-    background-color: var(--gray-50);
-  }
-  &:focus {
-    background-color: var(--gray-100);
-  }
   &:disabled {
     background-color: var(--gray-100);
   }
@@ -146,14 +128,42 @@
 .btn-cancel {
   background-color: var(--gray-100);
   color: var(--gray-700);
-  &:hover {
-    background-color: var(--gray-200);
-  }
-  &:focus {
-    background-color: var(--gray-300);
-  }
   &:disabled {
     background-color: var(--gray-300);
+  }
+}
+@media (min-width: 810px) {
+  .btn-primary {
+    &:hover {
+      background-color: var(--gray-900);
+    }
+    &:focus {
+      background-color: var(--gray-800);
+    }
+  }
+  .btn-secondary {
+    &:hover {
+      background-color: var(--gray-200);
+    }
+    &:focus {
+      background-color: var(--gray-300);
+    }
+  }
+  .btn-tertiary {
+    &:hover {
+      background-color: var(--gray-50);
+    }
+    &:focus {
+      background-color: var(--gray-100);
+    }
+  }
+  .btn-cancel {
+    &:hover {
+      background-color: var(--gray-200);
+    }
+    &:focus {
+      background-color: var(--gray-300);
+    }
   }
 }
 
