@@ -1,0 +1,16 @@
+.text-primary {
+  color: var(--primary-500);
+}
+.text-secondary {
+  color: var(--secondary-500);
+}
+.text-black {
+  color: var(--main-black);
+}
+.text-white {
+  color: var(--main-white);
+}
+
+.text-bold {
+  font-weight: 600;
+}

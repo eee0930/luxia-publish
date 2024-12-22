@@ -9,6 +9,7 @@
 @import url('card.css');
 @import url('overlays.css');
 @import url('selection.css');
+@import url('text.css');
 
 :root {
   --jumbotron-font: 'Poppins';
@@ -143,6 +144,7 @@ button, a {
     opacity: 0;
   }
 }
+
 
 ::-webkit-scrollbar {
   width: 12px; /* 세로 스크롤바 너비 */

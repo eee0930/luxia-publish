@@ -163,6 +163,9 @@
     transition: color 0.3s ease-out;
     will-change: color;
   }
+  .description {
+    display: none;
+  }
   &.step-past .title {
     color: var(--gray-500);
   }
@@ -211,8 +214,11 @@
 }
 @media (min-width: 810px) {
   .step {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
     height: auto;
-    width: 200px;
+    width: 212px;
     border-radius: 12px;
     overflow: hidden;
     padding: 0;
@@ -220,6 +226,10 @@
     background-color: var(--main-white);
     will-change: border-color 0.3s ease, background-color 0.3s ease;
     .text {
+      padding: 16px 24px 16px 0;
+      width: 100%;
+      max-width: 100%;
+      flex: 1 0 0%;
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -227,8 +237,10 @@
     }
     .title {
       width: 100%;
+      font-weight: 600;
     }
     .description {
+      display: block;
       width: 100%;
       font-size: 12px;
       font-weight: 400;
@@ -256,13 +268,14 @@
     background-clip: content-box, border-box;
   }
   .step-box {
-    width: 100%;
+    padding: 16px 0 16px 24px;
+    width: auto;
     height: auto;
-    padding: 16px 24px;
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 0;
     align-items: center;
+    border: none;
     img, svg {
       width: 40px;
       height: 40px;
