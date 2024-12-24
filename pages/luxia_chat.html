@@ -145,9 +145,63 @@
             </div>
             <div class="luxia-gnb-container-menu-name">LUXIA Chat</div>
           </div>
-          <div class="luxia-gnb-container__profile">
+          <div id="luxiaGnbPopupBtn" class="luxia-gnb-container__profile">
             <img class="luxia-gnb-container__profile-image" src="assets/icons/profile_man.svg" />
             <span class="luxia-gnb-container__profile-nickname"> 루시아님 </span>
+          </div>
+          <div id="luxiaGnbPopupMenu" class="luxia-gnb-container__popup">
+            <div class="luxia-gnb-container__popup-profile">
+              <!--/* [D] member profile image */-->
+              <img class="luxia-gnb-container__popup-image" src="assets/icons/default_profile.svg" />
+              <div class="luxia-gnb-container__popup-info">
+                <!--/* [D] member nickname */-->
+                <div class="luxia-gnb-container__popup-info-name">루시아님</div>
+                <div class="luxia-gnb-container__popup-info-part">Admin</div>
+              </div>
+            </div>
+            <div class="luxia-gnb-container__popup-divide"></div>
+            <ul class="luxia-gnb-container__popup-menu">
+              <li>
+                <a href="#" class="luxia-gnb-container__popup-menu-target">
+                  <img src="assets/icons/gnb/profile.svg" />
+                  <span>My Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="luxia-gnb-container__popup-menu-target">
+                  <img src="assets/icons/gnb/setting.svg" />
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="luxia-gnb-container__popup-menu-target">
+                  <img src="assets/icons/gnb/card.svg" />
+                  <span>Billing Plan</span>
+                  <label class="color-badge badge-fixed">4</label>
+                </a>
+              </li>
+            </ul>
+            <div class="luxia-gnb-container__popup-divide"></div>
+            <ul class="luxia-gnb-container__popup-menu">
+              <li>
+                <a href="#" class="luxia-gnb-container__popup-menu-target">
+                  <img src="assets/icons/gnb/money.svg" />
+                  <span>Pricing</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="luxia-gnb-container__popup-menu-target">
+                  <img src="assets/icons/gnb/faq.svg" />
+                  <span>FAQ</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="luxia-gnb-container__popup-menu-target">
+                  <img src="assets/icons/gnb/logout.svg" />
+                  <span>Log Out</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </header>
         <div class="luxia-layout-container__body">
@@ -284,20 +338,21 @@
             <div id="luxiaChatAnswer" class="luxia-chat-container">
               <div class="luxia-answer-container__cover">
                 <!-- question section -->
-                <div class="luxia-answer-container__question-section">
+                <div class="luxia-answer-container__question-button">
                   <button id="moveToNewChat" type="button" class="btn btn-secondary btn-sm">
                     <img src="assets/icons/chat/add-small.svg" />
                     <span>새 대화</span>
                   </button>
-                  <div class="luxia-answer-container__question-cover">
-                    <!-- [D] 사용자 profile image -->
-                    <div class="luxia-answer-container__question-profile">
-                      <img src="assets/icons/profile_man.svg" />
-                    </div>
-                    <!-- [D] 사용자 질문 -->
-                    <div class="luxia-answer-container__question">
-                      건강보험심사평가원 운영규정에서 위원회의 설치와 기능에 대해 자세히 알려줘
-                    </div>
+                </div>
+
+                <div class="luxia-answer-container__question-cover">
+                  <!-- [D] 사용자 profile image -->
+                  <div class="luxia-answer-container__question-profile">
+                    <img src="assets/icons/profile_man.svg" />
+                  </div>
+                  <!-- [D] 사용자 질문 -->
+                  <div class="luxia-answer-container__question">
+                    건강보험심사평가원 운영규정에서 위원회의 설치와 기능에 대해 자세히 알려줘
                   </div>
                 </div>
                 <!-- reference section -->

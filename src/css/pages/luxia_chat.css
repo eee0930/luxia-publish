@@ -1,5 +1,6 @@
 .luxia-chat-container {
   width: 100%;
+  flex-direction: column;
   display: none;
   &.active {
     display: flex;
@@ -119,7 +120,21 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 48px;
+  gap: 24px;
+}
+.luxia-answer-container__cover > div {
+  margin-bottom: 24px;
+}
+.luxia-answer-container__question-button {
+  width: calc(100% + 32px);
+  margin-bottom: 0 !important;
+  position: sticky;
+  top: 60px;
+  z-index: 5;
+  padding: 20px 16px 0;
+  margin-top: -40px;
+  margin-left: -16px;
+  background-color: var(--main-white);
 }
 .luxia-answer-container__question-section {
   display: flex;
@@ -295,8 +310,23 @@
 
 @media (min-width: 810px) { 
   .luxia-answer-container__cover {
-    gap: 64px;
+    gap: 30px;
     margin-bottom: 56px;
+  }
+  .luxia-answer-container__cover > div {
+    margin-bottom: 34px;
+  }
+  .luxia-answer-container__question-button {
+    width: calc(100% + 20px);
+    margin-bottom: 0 !important;
+    position: sticky;
+    top: 61px;
+    left: -10px;
+    z-index: 5;
+    padding: 20px 10px 10px;
+    margin-top: -80px;
+    margin-left: -10px;
+    background-color: var(--main-white);
   }
   .luxia-answer-container__question-section {
     gap: 40px;
