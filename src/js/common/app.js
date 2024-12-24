@@ -109,6 +109,40 @@ window.addEventListener("resize", () => {
   addClassMenuForPc();
 });
 
+// [handle gnb popup menu]----------------------------------------------------------------
+const luxiaGnbPopupBtn = document.querySelector("#luxiaGnbPopupBtn");
+const luxiaGnbPopupMenu = document.querySelector("#luxiaGnbPopupMenu");
+if (luxiaGnbPopupBtn && luxiaGnbPopupMenu) {
+  let luxiaGnbPopupMenuTimeout;
+  luxiaGnbPopupBtn.addEventListener("click", () => {
+    const isOpen = luxiaGnbPopupMenu.classList.contains("open");
+    if (luxiaGnbPopupMenuTimeout) {
+      clearTimeout(luxiaGnbPopupMenuTimeout);
+    }
+    if (isOpen) {
+      luxiaGnbPopupMenu.style.opacity = "";
+      luxiaGnbPopupMenuTimeout = setTimeout(() => {
+        luxiaGnbPopupMenu.classList.remove("open");
+        luxiaGnbPopupMenuTimeout = undefined;
+      }, 200);
+    } else {
+      luxiaGnbPopupMenu.classList.add("open");
+      luxiaGnbPopupMenuTimeout = setTimeout(() => {
+        luxiaGnbPopupMenu.style.opacity = 1;
+        luxiaGnbPopupMenuTimeout = undefined;
+      }, 50);
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (
+      !luxiaGnbPopupMenu.contains(event.target) &&
+      !luxiaGnbPopupBtn.contains(event.target)
+    ) {
+      luxiaGnbPopupMenu.classList.remove("open");
+    }
+  });
+}
+
 // [handle textarea]-------------------------------------------------------------------
 const solidTexareaList = document.querySelectorAll(".textarea-solid");
 if (solidTexareaList && solidTexareaList.length > 0) {

@@ -45,6 +45,7 @@
 }
 .luxia-gnb-container__profile {
   gap: 8px;
+  cursor: pointer;
 }
 .luxia-gnb-container__profile-image {
   width: 32px;
@@ -59,7 +60,98 @@
   line-height: 1.4;
   letter-spacing: -0.02em;
 }
-
+.luxia-gnb-container__popup {
+  position: absolute;
+  top: 100%;
+  right: 16px;
+  border-radius: 12px;
+  background-color: var(--main-white);
+  border: solid 1px var(--gray-300);
+  box-shadow: var(--shadow-sm);
+  width: 199px;
+  padding: 20px 16px;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  will-change: opacity;
+  &.open {
+    display: flex;
+  }
+  .luxia-gnb-container__popup-divide {
+    height: 1px;
+    width: 100%;
+    border-bottom: solid 1px var(--gray-100);
+  }
+}
+.luxia-gnb-container__popup-profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 12px;
+  .luxia-gnb-container__popup-image {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .luxia-gnb-container__popup-info {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 0 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+.luxia-gnb-container__popup-info-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--main-black);
+}
+.luxia-gnb-container__popup-info-part {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--gray-500);  
+}
+.luxia-gnb-container__popup-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  li {
+    width: 100%;
+  }
+}
+.luxia-gnb-container__popup-menu-target {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  position: relative;
+  img, svg {
+    width: 20px;
+    height: 20px;
+  }
+  .color-badge, .badge {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
 @media (min-width: 1200px) {
   .luxia-gnb-container {
     padding: 14px 40px;
@@ -109,5 +201,12 @@
     .luxia-gnb-container-menu-name {
       opacity: 1;
     }
+  }
+  .luxia-gnb-container__popup {
+    right: 40px;
+  }
+  .luxia-gnb-container__popup-profile .luxia-gnb-container__popup-image {
+    width: 32px;
+    height: 32px;
   }
 }

@@ -147,14 +147,22 @@
           </div>
           <div class="luxia-gnb-container__profile">
             <img class="luxia-gnb-container__profile-image" src="assets/icons/profile_man.svg" />
-            <span class="luxia-gnb-container__profile-nickname"> 룩시아님 </span>
+            <span class="luxia-gnb-container__profile-nickname"> 루시아님 </span>
           </div>
         </header>
         <div class="luxia-layout-container__body">
           <!-- [each route pages]----------------------------------------------------------------------------------- -->
           <section class="luxia-layout-container__body-section">
-            <div class="luxia-custom-chat__container">
-              <form>
+            <form>
+              <div class="luxia-custom-chat__container">
+                <div class="luxia-custom-chat__image-cover">
+                  <div class="luxia-custom-chat__image" style="background-image: url(assets/icons/default_profile.svg)">
+                    <input type="file" accept="image/*" class="luxia-custom-chat__image-file" />
+                    <div class="luxia-custom-chat__image-add">
+                      <img src="assets/icons/chat/add-small.svg" />
+                    </div>
+                  </div>
+                </div>
                 <div class="form-family">
                   <label class="form-label">이름</label>
                   <div class="input-text input-sm">
@@ -181,6 +189,12 @@
                     <input type="text" placeholder="입력 가능한 예시 문장을 입력하세요." />
                     <img src="assets/icons/chat/add-small.svg" />
                   </div>
+                  <div class="input-text input-sm">
+                    <input type="text" placeholder="입력 가능한 예시 문장을 입력하세요." />
+                  </div>
+                  <div class="input-text input-sm">
+                    <input type="text" placeholder="입력 가능한 예시 문장을 입력하세요." />
+                  </div>
                 </div>
                 <div class="form-family">
                   <label class="form-label">참고지식</label>
@@ -193,14 +207,12 @@
                 </div>
                 <div class="form-family">
                   <label class="form-label">모델설정</label>
-                  <div class="input-text input-sm">
-                    <select>
-                      <option value="">사용할 모델을 선택하세요</option>
-                      <option value="model1">model1</option>
-                      <option value="model2">model2</option>
-                      <option value="model3">model3</option>
-                    </select>
-                  </div>
+                  <select class="select" required>
+                    <option value="">사용할 모델을 선택하세요</option>
+                    <option value="model1">model1</option>
+                    <option value="model2">model2</option>
+                    <option value="model3">model3</option>
+                  </select>
                 </div>
                 <div class="form-family">
                   <label class="form-label">기타설정</label>
@@ -215,8 +227,8 @@
                     </label>
                   </div>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </section>
         </div>
       </div>

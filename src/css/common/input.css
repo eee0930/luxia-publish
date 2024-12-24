@@ -246,11 +246,11 @@
 
 @media(min-width: 810px) {
   .textarea-solid, .textarea-line {
-    border-width: 2px;
     height: auto;
     min-width: 280px;
   }
   .textarea-solid {
+    border-width: 2px;
     min-height: 90px;
   }
   .textarea-line {

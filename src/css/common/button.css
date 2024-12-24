@@ -23,6 +23,9 @@
     min-width: 48px;
     padding: 0 14px;
   }
+  &:disabled img, &:disabled svg {
+    opacity: 0.5;
+  }
 }
 .btn-lg {
   height: 56px;
@@ -115,10 +118,11 @@
   }
 }
 .btn-secondary {
-  background-color: var(--gray-100);
+  background-color: var(--gray-200);
   color: var(--main-black);
   &:disabled {
-    background-color: var(--gray-300);
+    background-color: var(--gray-100);
+    color: var(--gray-500);
   }
 }
 .btn-tertiary {
@@ -127,13 +131,15 @@
   color: var(--main-black);
   &:disabled {
     background-color: var(--gray-100);
+    color: var(--gray-500);
   }
 }
 .btn-cancel {
-  background-color: var(--gray-100);
+  background-color: var(--gray-200);
   color: var(--gray-700);
   &:disabled {
-    background-color: var(--gray-300);
+    background-color: var(--gray-100);
+    color: var(--gray-500);
   }
 }
 @media (min-width: 810px) {
@@ -147,10 +153,10 @@
   }
   .btn-secondary {
     &:hover {
-      background-color: var(--gray-200);
+      background-color: var(--gray-300);
     }
     &:focus {
-      background-color: var(--gray-300);
+      background-color: var(--gray-400);
     }
   }
   .btn-tertiary {
@@ -163,10 +169,10 @@
   }
   .btn-cancel {
     &:hover {
-      background-color: var(--gray-200);
+      background-color: var(--gray-300);
     }
     &:focus {
-      background-color: var(--gray-300);
+      background-color: var(--gray-400);
     }
   }
 }

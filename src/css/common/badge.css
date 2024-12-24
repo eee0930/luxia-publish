@@ -1,4 +1,4 @@
-.badge {
+.badge, .color-badge {
   min-width: 24px;
   height: 24px;
   border-radius: 4px;
@@ -13,6 +13,13 @@
   background-color: var(--gray-50);
   color: var(--main-black);
 }
+.color-badge {
+  background-color: var(--primary-300);
+  color: var(--primary-550);
+  border-radius: 999px;
+  height: 20px;
+}
+
 .badge-fixed {
   width: 24px;
 }
