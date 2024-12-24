@@ -111,8 +111,27 @@
     height: 20px;
   }
 }
+.luxia-custom-chat__container-buttons {
+  padding: 16px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  button {
+    flex: 1 0 0;
+  }
+}
 @media (min-width: 810px) {
   .luxia-custom-chat__image-cover {
     justify-content: start;
+  }
+  .luxia-custom-chat__container-buttons {
+    padding: 16px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    button {
+      flex: unset;
+    }
   }
 }

@@ -210,3 +210,36 @@
     height: 32px;
   }
 }
+
+
+
+.luxia-gnb-container__back-header {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-white);
+  z-index: 1;
+  padding: 6px 16px;
+  align-items: center;
+  &.active {
+    display: flex; 
+  }
+  button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--main-black);
+  }
+}
+@media (min-width: 1200px) {
+  .luxia-gnb-container__back-header {
+    display: none !important;
+  }
+}

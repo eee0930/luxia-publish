@@ -53,6 +53,12 @@
     width: 100%;
   }
 }
+.content-tab-box__contents-input-cover  {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 @media (min-width: 810px) {
   .content-tab-box {
     padding: 32px;

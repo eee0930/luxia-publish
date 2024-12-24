@@ -203,6 +203,14 @@
               </li>
             </ul>
           </div>
+          <!--/* [D] 뒤로가기가 필요한 GNB인 경우 'active' class 추가 (Only for Mobile) */-->
+          <div class="luxia-gnb-container__back-header active">
+            <!--/* [D] target url로 이동 하는 버튼일 경우 'jsHistoryBack' class 추가 */-->
+            <button data-target-url="pages/custom_chat.html" type="button" class="jsHistoryBack">
+              <img src="assets/icons/gnb/chevron-left.svg" />
+              <span>Custom Chat</span>
+            </button>
+          </div>
         </header>
         <div class="luxia-layout-container__body">
           <!-- [each route pages]----------------------------------------------------------------------------------- -->
@@ -243,12 +251,6 @@
                     <input type="text" placeholder="입력 가능한 예시 문장을 입력하세요." />
                     <img src="assets/icons/chat/add-small.svg" />
                   </div>
-                  <div class="input-text input-sm">
-                    <input type="text" placeholder="입력 가능한 예시 문장을 입력하세요." />
-                  </div>
-                  <div class="input-text input-sm">
-                    <input type="text" placeholder="입력 가능한 예시 문장을 입력하세요." />
-                  </div>
                 </div>
                 <div class="form-family">
                   <label class="form-label">참고지식</label>
@@ -281,6 +283,17 @@
                     </label>
                   </div>
                 </div>
+              </div>
+              <div class="luxia-custom-chat__container-buttons">
+                <!--/* [D] target url로 이동 하는 버튼일 경우 'jsHistoryBack' class 추가 */-->
+                <button
+                  data-target-url="pages/custom_chat.html"
+                  type="reset"
+                  class="jsHistoryBack btn btn-secondary btn-lg"
+                >
+                  취소
+                </button>
+                <button type="button" class="btn btn-primary btn-lg">만들기</button>
               </div>
             </form>
           </section>

@@ -143,6 +143,17 @@ if (luxiaGnbPopupBtn && luxiaGnbPopupMenu) {
   });
 }
 
+// [handle cancel button]----------------------------------------------------------------
+const historyBackBtn = document.querySelectorAll(".jsHistoryBack");
+if (historyBackBtn && historyBackBtn.length > 0) {
+  historyBackBtn.forEach((btn) => {
+    const targetUrl = btn.dataset.targetUrl;
+    btn.addEventListener("click", () => {
+      window.location.href = targetUrl;
+    });
+  });
+}
+
 // [handle textarea]-------------------------------------------------------------------
 const solidTexareaList = document.querySelectorAll(".textarea-solid");
 if (solidTexareaList && solidTexareaList.length > 0) {
