@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 | LUXIA</title>
+    <base href="../../" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+    <link rel="stylesheet" href="src/css/common/style.css" />
+    <link rel="stylesheet" href="src/css/pages/auth.css" />
+  </head>
+  <body>
+    <div class="luxia-auth-container">
+      <div class="luxia-auth-container__cover">
+        <div class="luxia-auth-container__contents">
+          <div class="luxia-auth-container__headline">
+            <div class="luxia-auth-container__logo">
+              <img src="/assets/icons/logo.svg" />
+              <span>Ask LUXIA</span>
+            </div>
+            <div class="description-style">대화형 AI 검색 Ask LUXIA로 시작하세요.</div>
+          </div>
+          <form class="luxia-auth-container__form">
+            <div class="form-family">
+              <label class="form-label">아이디</label>
+              <div class="input-text input-sm">
+                <input type="email" />
+                <button type="button" class="btn btn-secondary">인증코드 받기</button>
+              </div>
+            </div>
+            <div class="form-family">
+              <label class="form-label">인증코드</label>
+              <div class="form-info">인증코드 6자리를 입력해주세요.</div>
+              <div class="code-family">
+                <input type="number" class="code" min="0" max="9" />
+                <input type="number" class="code" min="0" max="9" />
+                <input type="number" class="code" min="0" max="9" />
+                <input type="number" class="code" min="0" max="9" />
+                <input type="number" class="code" min="0" max="9" />
+                <input type="number" class="code" min="0" max="9" />
+              </div>
+            </div>
+            <div class="checkbox-family">
+              <input type="checkbox" class="checkbox" checked />
+              <label>자동 로그인</label>
+            </div>
+          </form>
+        </div>
+        <div class="luxia-auth-container__button-cover">
+          <button type="submit" class="btn btn-primary btn-100" disabled>로그인</button>
+          <div class="luxia-auth-container__link-cover">
+            <a href="pages/auth/join_member.html">회원가입</a>
+            <div class="divide"></div>
+            <span> 아직 회원이 아니신가요? </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

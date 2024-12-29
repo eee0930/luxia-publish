@@ -2,11 +2,19 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
   .form-label {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.6;
     letter-spacing: -0.02em;
+  }
+  .form-info {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--gray-500);
   }
 }
 .input-family {
@@ -19,6 +27,8 @@
     flex: 1 0 0%;
   }
 }
+
+/* [input-text]-------------------------------------------------------- */
 .input-text {
   width: auto;
   height: 56px;
@@ -35,7 +45,7 @@
   &:hover {
     border-color: var(--gray-400);
   }
-  input[type="text"], input[type="file"], input[type="search"], input[type="number"] {
+  input[type="text"], input[type="email"], input[type="file"], input[type="search"], input[type="number"] {
     width: 100%;
     max-width: 100%;
     flex: 1 0 0%;
@@ -57,6 +67,17 @@
     width: 32px;
     height: 32px;
   }
+  &:has(.btn) {
+    padding-right: 6px;
+  }
+  .btn {
+    height: 36px;
+    min-width: 64px;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--main-black);
+  }
 }
 .input-text:focus {
   border-color: var(--main-black);
@@ -67,7 +88,7 @@
 .input-text.disabled {
   background-color: var(--gray-50);
   border-color: var(--gray-400);
-  input[type="text"], input[type="file"], input[type="search"], input[type="number"] {
+  input[type="text"], input[type="email"], input[type="file"], input[type="search"], input[type="number"] {
     color: var(--gray-500);
   }
 }
@@ -80,7 +101,10 @@
     width: 32px;
     height: 32px;
   }
-  input[type="text"], input[type="file"], input[type="search"], input[type="number"] {
+  &:has(.btn) {
+    padding-right: 6px;
+  }
+  input[type="text"], input[type="email"], input[type="file"], input[type="search"], input[type="number"] {
     height: 29px;
     font-size: 18px;
   }
@@ -94,7 +118,10 @@
     width: 24px;
     height: 24px;
   }
-  input[type="text"], input[type="file"], input[type="search"], input[type="number"] {
+  &:has(.btn) {
+    padding-right: 6px;
+  }
+  input[type="text"], input[type="email"], input[type="file"], input[type="search"], input[type="number"] {
     height: 21px;
     font-size: 15px;
     line-height: 1.4;
@@ -110,7 +137,7 @@
       width: 32px;
       height: 32px;
     }
-    input[type="text"], input[type="file"], input[type="search"], input[type="number"] {
+    input[type="text"], input[type="email"], input[type="file"], input[type="search"], input[type="number"] {
       height: 29px;
       font-size: 18px;
     }
@@ -124,7 +151,7 @@
       width: 24px;
       height: 24px;
     }
-    input[type="text"], input[type="file"], input[type="search"], input[type="number"] {
+    input[type="text"], input[type="email"], input[type="file"], input[type="search"], input[type="number"] {
       height: 21px;
       font-size: 15px;
       line-height: 1.4;
@@ -132,6 +159,7 @@
   }
 }
 
+/* [textarea-line]-------------------------------------------------------- */
 .textarea-line {
   padding: 0;
   border: solid 1px var(--gray-300);
@@ -192,6 +220,8 @@
     background-color: var(--gray-50);
   }
 }
+
+/* [textarea-solid]-------------------------------------------------------- */
 .textarea-solid {
   border: solid 2px transparent;
   background-color: var(--gray-50);
@@ -302,3 +332,40 @@
   }
 }
 
+
+/* [code]-------------------------------------------------------- */
+.code-family {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.code {
+  width: 40px;
+  height: 40px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--gray-300);
+  background-color: var(--main-white);
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--main-black);
+  text-align: center;
+  &:focus {
+    outline: none;
+    box-shadow: var(--shadow-sm);
+  }
+}
+@media (min-width: 810px) {
+  .code {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
+}
