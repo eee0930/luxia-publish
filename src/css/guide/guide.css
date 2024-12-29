@@ -1,0 +1,68 @@
+.luxia-information-architecture {
+  overflow: auto;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 1920px;
+  max-height: 1080px;
+  padding: 60px 20px;
+  
+}
+.luxia-information-architecture__cover {
+  position: relative;
+  margin: 0 120px 100px 0;
+  width: 1500px;
+  svg {
+    position: absolute;
+  }
+}
+.luxia-information-architecture__title {
+  font-family: var(--jumbotron-font);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+}
+.ia-label {
+  width: max-content;
+  position: absolute;
+  height: 48px;
+  min-width: 96px;
+  padding: 0px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ia-primary {
+  background-color: var(--primary-300);
+  color: var(--primary-500);
+}
+.ia-secondary {
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+}
+.ia-primary-outline {
+  background-color: var(--main-white);
+  color: var(--primary-500);
+  border: solid 1px var(--primary-500);
+}
+.ia-sub-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 52px;
+  left: 976px;
+  width: max-content;
+  color: var(--primary-500);
+}

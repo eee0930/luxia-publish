@@ -1,5 +1,9 @@
 .luxia-auth-container {
-  padding: 80px 16px;
+  min-height: 100vh;
+  padding: 0 16px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .luxia-auth-container__cover {
   background-color: var(--main-white);
@@ -7,11 +11,14 @@
   min-height: 480px;
   max-height: 600px;
   padding: 32px 24px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 40px;
   border-radius: 16px;
   border: 1px solid var(--gray-300);
+  &.active {
+    display: flex;
+  }
 }
 .luxia-auth-container__contents, 
 .luxia-auth-container__button-cover, 
@@ -67,7 +74,37 @@
     border-right: solid 1px var(--gray-300);
   }
   a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--gray-500);
+  }
+  a.join {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
     color: var(--gray-700);
     text-decoration: underline;
+  }
+}
+.luxia-auth-container__buttons {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  button {
+    width: 100%;
+    flex: 50% 0 0%;
+  }
+}
+
+@media (min-width: 810px) {
+  .luxia-auth-container {
+    padding: 0 16px 0;
+  }
+  .luxia-auth-container__cover {
+    width: 460px;
+    max-height: 640px;
+    padding: 40px;
   }
 }

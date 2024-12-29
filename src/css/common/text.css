@@ -10,6 +10,12 @@
 .text-white {
   color: var(--main-white);
 }
+.text-danger {
+  color: var(--semantic-error);
+}
+.text-gray {
+  color: var(--gray-500);
+}
 
 .text-bold {
   font-weight: 600;

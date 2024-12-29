@@ -7,304 +7,321 @@
     <base href="" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
     <link rel="stylesheet" href="src/css/common/style.css" />
-    <link rel="stylesheet" href="src/css/pages/home.css" />
+    <link rel="stylesheet" href="src/css/guide/guide.css" />
   </head>
   <body>
-    <div class="luxia-layout-container menu-active-pc">
-      <div class="luxia-layout-container__menu">
-        <!-- [menu.html]-------------------------------------------------------------------------------------------- -->
-        <div class="luxia-menu-container">
-          <div class="luxia-menu-container__dimm"></div>
-          <div class="luxia-menu-container__inner">
-            <div class="luxia-menu-container__head">
-              <div class="luxia-menu-container__head-button">
-                <button class="luxia-menu-container__button" type="button">
-                  <img src="assets/icons/menu/menu.svg" />
-                </button>
-              </div>
-              <div class="luxia-menu-container__head-logo">
-                <img src="assets/icons/logo.svg" />
-                <span>Ask LUXIA</span>
-              </div>
-              <div class="luxia-menu-container__head-button-pc">
-                <button type="button" class="luxia-menu-container__button-pc">
-                  <img class="luxia-menu-container__head-button-close" src="assets/icons/menu/arrow_in.svg" />
-                  <img class="luxia-menu-container__head-button-open" src="assets/icons/menu/arrow_out.svg" />
-                </button>
-              </div>
-            </div>
-            <div class="luxia-menu-container__cover">
-              <ul class="luxia-menu-container__menu">
-                <li>
-                  <a href="index.html" class="luxia-menu-container__menu-target">
-                    <img src="assets/icons/menu/home.svg" />
-                    <span>Ask Home</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="pages/todays_pick.html" class="luxia-menu-container__menu-target">
-                    <img src="assets/icons/menu/today.svg" />
-                    <span>Today's Pick</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="pages/luxia_chat.html" class="luxia-menu-container__menu-target">
-                    <img src="assets/icons/menu/chat.svg" />
-                    <span>LUXIA Chat</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="pages/luxia_docs.html" class="luxia-menu-container__menu-target">
-                    <img src="assets/icons/menu/docs.svg" />
-                    <span>LUXIA Docs</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="pages/luxia_generate.html" class="luxia-menu-container__menu-target">
-                    <img src="assets/icons/menu/generate.svg" />
-                    <span>LUXIA Generate</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="pages/custom_chat/custom_chat.html" class="luxia-menu-container__menu-target">
-                    <img src="assets/icons/menu/setting.svg" />
-                    <span>Custom chat 탐색</span>
-                  </a>
-                </li>
-              </ul>
-              <div class="luxia-menu-container__sub">
-                <div class="luxia-menu-container__sub-title">
-                  <div class="luxia-menu-container__sub-title-name">
-                    <object data="assets/icons/menu/bubble_chat.svg" type="image/svg+xml"></object>
-                    <span>Custom chat</span>
-                  </div>
-                  <a href="" class="luxia-menu-container__sub-title-more"> 더보기 </a>
-                </div>
-                <ul class="luxia-menu-container__sub-menu">
-                  <li>
-                    <a href="" class="luxia-menu-container__sub-menu-target">
-                      <span>메뉴얼 안내</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="luxia-menu-container__sub-menu-target">
-                      <span>상담내용 요약</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="luxia-menu-container__sub-menu-target">
-                      <span>답변 문구 생성</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="luxia-menu-container__sub-menu-target">
-                      <span>텍스트 번역</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="luxia-menu-container__sub">
-                <div class="luxia-menu-container__sub-title">
-                  <div class="luxia-menu-container__sub-title-name">
-                    <object data="assets/icons/menu/edit_pencil.svg" type="image/svg+xml"></object>
-                    <span>Recents</span>
-                  </div>
-                  <a href="pages/recents.html" class="luxia-menu-container__sub-title-more"> 더보기 </a>
-                </div>
-                <ul class="luxia-menu-container__sub-menu">
-                  <li>
-                    <a href="" class="luxia-menu-container__sub-menu-target">
-                      <span>심사평가원, 2024년도 선별짐중사항목 공개</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="luxia-menu-container__sub-menu-target">
-                      <span>금투세 폐지에 따른</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="luxia-layout-container__section">
-        <!-- [gnb.html]--------------------------------------------------------------------------------------------- -->
-        <header class="luxia-gnb-container">
-          <div class="luxia-gnb-container__head">
-            <div class="luxia-gnb-container__head-title">
-              <div class="luxia-gnb-container__head-button">
-                <button class="luxia-gnb-container__button" type="button">
-                  <img src="assets/icons/menu/menu.svg" />
-                </button>
-              </div>
-              <div class="luxia-gnb-container__head-logo">
-                <img src="assets/icons/logo.svg" />
-                <span>Ask LUXIA</span>
-              </div>
-            </div>
-            <div class="luxia-gnb-container-menu-name">Today’s Pick</div>
-          </div>
-          <div id="luxiaGnbPopupBtn" class="luxia-gnb-container__profile">
-            <img class="luxia-gnb-container__profile-image" src="assets/icons/default_profile.svg" />
-            <span class="luxia-gnb-container__profile-nickname"> 루시아님 </span>
-          </div>
-          <div id="luxiaGnbPopupMenu" class="luxia-gnb-container__popup">
-            <div class="luxia-gnb-container__popup-profile">
-              <img class="luxia-gnb-container__popup-image" src="assets/icons/default_profile.svg" />
-              <div class="luxia-gnb-container__popup-info">
-                <div class="luxia-gnb-container__popup-info-name">루시아님</div>
-                <div class="luxia-gnb-container__popup-info-part">Admin</div>
-              </div>
-            </div>
-            <div class="luxia-gnb-container__popup-divide"></div>
-            <ul class="luxia-gnb-container__popup-menu">
-              <li>
-                <a href="#" class="luxia-gnb-container__popup-menu-target">
-                  <img src="assets/icons/gnb/profile.svg" />
-                  <span>My Profile</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="luxia-gnb-container__popup-menu-target">
-                  <img src="assets/icons/gnb/setting.svg" />
-                  <span>Settings</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="luxia-gnb-container__popup-menu-target">
-                  <img src="assets/icons/gnb/card.svg" />
-                  <span>Billing Plan</span>
-                  <label class="color-badge badge-fixed">4</label>
-                </a>
-              </li>
-            </ul>
-            <div class="luxia-gnb-container__popup-divide"></div>
-            <ul class="luxia-gnb-container__popup-menu">
-              <li>
-                <a href="#" class="luxia-gnb-container__popup-menu-target">
-                  <img src="assets/icons/gnb/money.svg" />
-                  <span>Pricing</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="luxia-gnb-container__popup-menu-target">
-                  <img src="assets/icons/gnb/faq.svg" />
-                  <span>FAQ</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="luxia-gnb-container__popup-menu-target">
-                  <img src="assets/icons/gnb/logout.svg" />
-                  <span>Log Out</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </header>
-        <div class="luxia-layout-container__body">
-          <!-- [each route pages]----------------------------------------------------------------------------------- -->
-          <section class="luxia-layout-container__body-section">
-            <!-- import jumbotron.html -->
-            <div class="luxia-jumbotron-container">
-              <h1 class="luxia-jumbotron-container__title">Today’s Pick</h1>
-              <div class="luxia-jumbotron-container__description">
-                오늘의 주제를 확인하고, 관심 있는 내용을
-                <br class="is-mo" />
-                빠르고 쉽게 알아보세요!
-              </div>
-            </div>
-            <div class="card-family">
-              <!--/* [D] start of Today's Pick Card list */-->
-              <!-- card type 1 -->
-              <div class="card type-1">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/1.png" alt="직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">뉴스저널리즘</div>
-                      <h5 class="card__info-title">직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%</h5>
-                      <div class="card__info-description">
-                        내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로 결정됐다. 건강보험정책심의위원회(건정심)는
-                        이와 같은 내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.04</div>
-                  </div>
-                </div>
-              </div>
-              <!-- card type 2 -->
-              <div class="card type-2">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/2.png" alt="'벌써 신경전'...넷플 흑백 요리사 시즌2 참가자 모집" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">매일경제</div>
-                      <h5 class="card__info-title">“벌써 신경전”...넷플 흑백 요리사 시즌2 참가자 모집</h5>
-                      <div class="card__info-description">
-                        넷플릭스가 예능 ‘흑백요리사: 요리 계급 전쟁’ 시즌2 참가자 모집을 알렸다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.03</div>
-                  </div>
-                </div>
-              </div>
-              <!-- card type 3 -->
-              <div class="card type-3">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/3.png" alt="주식시장 정상 개장…당국, 금융상황 점검회의 개최" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">세계일보</div>
-                      <h5 class="card__info-title">주식시장 정상 개장…당국, 금융상황 점검회의 개최</h5>
-                      <div class="card__info-description">
-                        4일 금융위원회와 한국거래소 등에 따르면, 이날 코스피와 코스닥 등 국내 주식시장은 오전 9시 정상
-                        개장하기로 했다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.04</div>
-                  </div>
-                </div>
-              </div>
-              <!-- card type 2 -->
-              <div class="card type-2">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/4.png" alt="한국, 2025년 2월 데이비스컵 테니스 대회서 체코와 격돌" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">연합뉴스</div>
-                      <h5 class="card__info-title">한국, 2025년 2월 데이비스컵 테니스 대회서 체코와 격돌</h5>
-                      <div class="card__info-description">
-                        한국 남자 테니스 대표팀이 국가대항전인 데이비스컵 2025시즌 파이널스 진출전(Qualifiers) 1회전에서
-                        체코를 상대하게 됐다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.03</div>
-                  </div>
-                </div>
-              </div>
-              <!-- card type 4 -->
-              <div class="card type-4">
-                <div class="card-cover">
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">매일경제</div>
-                      <h5 class="card__info-title">“AI시대, 자동화가 반도체 설계 판을 바꾼다”</h5>
-                      <div class="card__info-description">
-                        “반도체 설계 자동화(Electronic Design Auto mation·EDA) 기술을 보유한 반도체 기업이 인공지능(AI)
-                        시대 승자가 될 것이다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.04</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+    <div class="luxia-information-architecture">
+      <div class="luxia-information-architecture__cover">
+        <h1 class="luxia-information-architecture__title">
+          Information<br />
+          Architecture
+        </h1>
+        <!-- [arrow section]-------------------------------------------------- -->
+        <svg
+          width="80"
+          height="52"
+          viewBox="0 0 80 52"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="top: 46px; left: 720px"
+        >
+          <path
+            d="M80 3L75 0.113249V5.88675L80 3ZM0 51.5H20V50.5H0V51.5ZM40.5 31V23H39.5V31H40.5ZM60 3.5H75.5V2.5H60V3.5ZM40.5 23C40.5 12.2304 49.2304 3.5 60 3.5V2.5C48.6782 2.5 39.5 11.6782 39.5 23H40.5ZM20 51.5C31.3218 51.5 40.5 42.3218 40.5 31H39.5C39.5 41.7696 30.7696 50.5 20 50.5V51.5Z"
+            fill="#0096F6"
+          />
+        </svg>
+        <svg
+          width="80"
+          height="52"
+          viewBox="0 0 80 52"
+          fill="none"
+          style="top: 96px; left: 720px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M80 49L75 46.1132V51.8868L80 49ZM0 1.5H20V0.5H0V1.5ZM39.5 21V29H40.5V21H39.5ZM60 49.5H75.5V48.5H60V49.5ZM39.5 29C39.5 40.3218 48.6782 49.5 60 49.5V48.5C49.2304 48.5 40.5 39.7696 40.5 29H39.5ZM20 1.5C30.7696 1.5 39.5 10.2304 39.5 21H40.5C40.5 9.67816 31.3218 0.5 20 0.5V1.5Z"
+            fill="#0096F6"
+          />
+        </svg>
+        <!-- // -->
+        <svg
+          width="6"
+          height="20"
+          viewBox="0 0 6 20"
+          fill="none"
+          style="top: 164px; left: 848px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M3 20L5.88675 15H0.113249L3 20ZM2.5 0V15.5H3.5V0H2.5Z" fill="#0096F6" />
+        </svg>
+        <svg
+          width="6"
+          height="20"
+          viewBox="0 0 6 20"
+          fill="none"
+          style="top: 232px; left: 848px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M3 20L5.88675 15H0.113249L3 20ZM2.5 0V15.5H3.5V0H2.5Z" fill="#0096F6" />
+        </svg>
+        <svg
+          width="80"
+          height="48"
+          viewBox="0 0 80 48"
+          style="top: 53px; left: 896px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M80 45L75 42.1132V47.8868L80 45ZM0 1.5H20V0.5H0V1.5ZM39.5 21V25H40.5V21H39.5ZM60 45.5H75.5V44.5H60V45.5ZM39.5 25C39.5 36.3218 48.6782 45.5 60 45.5V44.5C49.2304 44.5 40.5 35.7696 40.5 25H39.5ZM20 1.5C30.7696 1.5 39.5 10.2304 39.5 21H40.5C40.5 9.67816 31.3218 0.5 20 0.5V1.5Z"
+            fill="#0096F6"
+          />
+        </svg>
+        <!-- // -->
+        <svg
+          width="80"
+          height="184"
+          viewBox="0 0 80 184"
+          fill="none"
+          style="top: 96px; left: 896px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M80 3L75 0.113249V5.88675L80 3ZM0 183.5H20V182.5H0V183.5ZM40.5 163V23H39.5V163H40.5ZM60 3.5H75.5V2.5H60V3.5ZM40.5 23C40.5 12.2304 49.2304 3.5 60 3.5V2.5C48.6782 2.5 39.5 11.6782 39.5 23H40.5ZM20 183.5C31.3218 183.5 40.5 174.322 40.5 163H39.5C39.5 173.77 30.7696 182.5 20 182.5V183.5Z"
+            fill="#0096F6"
+          />
+        </svg>
+        <svg
+          width="11"
+          height="90"
+          viewBox="0 0 11 90"
+          fill="none"
+          style="top: 96px; left: 966px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M11 1V1C5.47715 1 1 5.47715 1 11V79C1 84.5228 5.47715 89 11 89V89" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="11"
+          height="246"
+          viewBox="0 0 11 246"
+          style="top: 96px; left: 966px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M11 1V1C5.47715 1 1 5.47715 1 11V235C1 240.523 5.47715 245 11 245V245" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="11"
+          height="334"
+          viewBox="0 0 11 334"
+          style="top: 96px; left: 966px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M11 1V1C5.47715 1 1 5.47715 1 11V323C1 328.523 5.47715 333 11 333V333" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="11"
+          height="558"
+          viewBox="0 0 11 558"
+          fill="none"
+          style="top: 96px; left: 966px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M11 1V1C5.47715 1 1 5.47715 1 11V547C1 552.523 5.47715 557 11 557V557" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="11"
+          height="646"
+          viewBox="0 0 11 646"
+          style="top: 96px; left: 966px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M11 1V1C5.47715 1 1 5.47715 1 11V635C1 640.523 5.47715 645 11 645V645" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="11"
+          height="734"
+          viewBox="0 0 11 734"
+          fill="none"
+          style="top: 96px; left: 966px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M11 1V1C5.47715 1 1 5.47715 1 11V723C1 728.523 5.47715 733 11 733V733" stroke="#0096F6" />
+        </svg>
+        <!-- // -->
+        <svg
+          width="40"
+          height="2"
+          viewBox="0 0 40 2"
+          style="top: 184px; left: 1097px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 1H40" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="2"
+          height="20"
+          viewBox="0 0 2 20"
+          style="top: 208px; left: 1185px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1 0V20" stroke="#0096F6" />
+        </svg>
+        <!-- // -->
+        <svg
+          width="40"
+          height="2"
+          viewBox="0 0 40 2"
+          style="top: 428px; left: 1093px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 1H40" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="2"
+          height="20"
+          viewBox="0 0 2 20"
+          style="top: 452px; left: 1181px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1 0V20" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="2"
+          height="20"
+          viewBox="0 0 2 20"
+          style="top: 520px; left: 1181px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1 0V20" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="40"
+          height="72"
+          viewBox="0 0 40 72"
+          fill="none"
+          style="top: 428px; left: 1229px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M40 69L35 66.1133V71.8867L40 69ZM19.5 21V49H20.5V21H19.5ZM19.5 49C19.5 60.3218 28.6782 69.5 40 69.5V68.5C29.2304 68.5 20.5 59.7696 20.5 49H19.5ZM0 1.5C10.7696 1.5 19.5 10.2304 19.5 21H20.5C20.5 9.67816 11.3218 0.5 0 0.5V1.5Z"
+            fill="#0096F6"
+          />
+        </svg>
+        <svg
+          width="40"
+          height="6"
+          viewBox="0 0 40 6"
+          style="top: 495px; left: 1229px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M40 3L35 0.113249V5.88675L40 3ZM0 3.5H35.5V2.5H0V3.5Z" fill="#0096F6" />
+        </svg>
+        <svg
+          width="40"
+          height="72"
+          viewBox="0 0 40 72"
+          style="top: 495px; left: 1229px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M40 3L35 0.113249V5.88675L40 3ZM20.5 51V23H19.5V51H20.5ZM20.5 23C20.5 12.2304 29.2304 3.5 40 3.5V2.5C28.6782 2.5 19.5 11.6782 19.5 23H20.5ZM0 71.5C11.3218 71.5 20.5 62.3218 20.5 51H19.5C19.5 61.7696 10.7696 70.5 0 70.5V71.5Z"
+            fill="#0096F6"
+          />
+        </svg>
+        <!-- // -->
+        <svg
+          width="40"
+          height="2"
+          viewBox="0 0 40 2"
+          style="top: 652px; left: 1122px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 1H40" stroke="#0096F6" />
+        </svg>
+        <svg
+          width="20"
+          height="6"
+          viewBox="0 0 20 6"
+          fill="none"
+          style="top: 652px; left: 1258px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M20 3L15 0.113249V5.88675L20 3ZM0 3.5H15.5V2.5H0V3.5Z" fill="#0096F6" />
+        </svg>
+        <svg
+          width="20"
+          height="6"
+          viewBox="0 0 20 6"
+          fill="none"
+          style="top: 652px; left: 1374px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M20 3L15 0.113249V5.88675L20 3ZM0 3.5H15.5V2.5H0V3.5Z" fill="#0096F6" />
+        </svg>
+        <!-- // -->
+        <svg
+          width="40"
+          height="6"
+          viewBox="0 0 40 6"
+          style="top: 740px; left: 1133px"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M40 3L35 0.113249V5.88675L40 3ZM0 3.5H35.5V2.5H0V3.5Z" fill="#0096F6" />
+        </svg>
+
+        <!-- [IA start]------------------------------------------------------- -->
+        <!-- root -->
+        <label class="ia-label ia-primary-outline" style="top: 72px; left: 601px">Luxia-Cloud</label>
+        <!-- auth -->
+        <a class="ia-label ia-primary" href="pages/auth/login.html" style="top: 28px; left: 800px">Log-in</a>
+        <a class="ia-label ia-primary" href="pages/auth/sign_up.html" style="top: 116px; left: 800px"> Sign up </a>
+        <label class="ia-label ia-secondary" style="top: 184px; left: 800px"> 약관동의 </label>
+        <label class="ia-label ia-primary-outline" style="top: 252px; left: 800px"> 가입완료 </label>
+        <!-- pages -->
+        <h3 class="ia-sub-title">LNB</h3>
+        <label class="ia-label ia-primary-outline" style="top: 72px; left: 976px"> Ask Home </label>
+        <!-- Today's Pick -->
+        <a class="ia-label ia-primary" href="pages/todays_pick.html" style="top: 160px; left: 976px"> Today's Pick </a>
+        <label class="ia-label ia-secondary" style="top: 160px; left: 1137px"> 주요이슈 </label>
+        <label class="ia-label ia-secondary" style="top: 228px; left: 1137px"> 질문추천 </label>
+        <!-- LUXIA Chat -->
+        <a class="ia-label ia-primary" href="pages/luxia_chat.html" style="top: 316px; left: 976px"> LUXIA Chat </a>
+        <!-- LUXIA Docs -->
+        <a class="ia-label ia-primary" href="pages/luxia_docs.html" style="top: 404px; left: 976px"> LUXIA Docs </a>
+        <label class="ia-label ia-secondary" style="top: 404px; left: 1133px"> file </label>
+        <label class="ia-label ia-secondary" style="top: 472px; left: 1133px"> url </label>
+        <label class="ia-label ia-secondary" style="top: 540px; left: 1133px"> text </label>
+        <label class="ia-label ia-primary-outline" style="top: 472px; left: 1269px"> 요약하기 </label>
+        <!-- LUXIA Generate -->
+        <a class="ia-label ia-primary" href="pages/luxia_generate.html" style="top: 628px; left: 976px">
+          LUXIA Generate
+        </a>
+        <label class="ia-label ia-secondary" style="top: 628px; left: 1162px"> 참고내용 </label>
+        <label class="ia-label ia-secondary" style="top: 628px; left: 1278px"> 목차검토 </label>
+        <label class="ia-label ia-secondary" style="top: 628px; left: 1394px"> 작성결과 </label>
+        <!-- Custom Chat -->
+        <a class="ia-label ia-primary" href="pages/custom_chat/custom_chat.html" style="top: 716px; left: 976px">
+          Custom Chat 탐색
+        </a>
+        <a class="ia-label ia-primary" href="pages/custom_chat/add_custom_chat.html" style="top: 716px; left: 1173px">
+          만들기
+        </a>
+        <a class="ia-label ia-primary" href="pages/recents.html" style="top: 804px; left: 976px"> recent 더보기 </a>
       </div>
     </div>
     <script src="src/js/common/app.js"></script>
-    <script src="src/js/pages/home.js"></script>
   </body>
 </html>

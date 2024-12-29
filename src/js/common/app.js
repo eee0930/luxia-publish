@@ -73,10 +73,10 @@ const handleToggleMenuForPc = () => {
   }
 };
 
-menuToggleBtnMobile.addEventListener("click", handleToggleMenu);
-menuContainerDimm.addEventListener("click", handleToggleMenu);
-menuToggleBtnOnGnb.addEventListener("click", handleToggleMenu);
-menuToggleBtnPc.addEventListener("click", handleToggleMenuForPc);
+menuToggleBtnMobile?.addEventListener("click", handleToggleMenu);
+menuContainerDimm?.addEventListener("click", handleToggleMenu);
+menuToggleBtnOnGnb?.addEventListener("click", handleToggleMenu);
+menuToggleBtnPc?.addEventListener("click", handleToggleMenuForPc);
 
 const getLocalMenuActiveInfo = () => {
   const width = window.innerWidth;
@@ -84,11 +84,12 @@ const getLocalMenuActiveInfo = () => {
   if (width > BREAK_POINT && luxiaAskContext) {
     const { menuActive } = JSON.parse(luxiaAskContext);
     if (menuActive) {
-      luxiaLayoutContainer.classList.add(MENU_ACTIVE_PC);
+      luxiaLayoutContainer?.classList.add(MENU_ACTIVE_PC);
     }
   }
 };
 const addClassMenuForPc = () => {
+  if (!luxiaLayoutContainer) return;
   const width = window.innerWidth;
   const isMenuActive = luxiaLayoutContainer.classList.contains(MENU_ACTIVE);
   const isMenuActivePc =
@@ -291,7 +292,50 @@ if (sidePopupBtns && sidePopupBtns.length > 0) {
   });
 }
 
-// handle control tab box
+// [handle small popup]------------------------------------------------
+const smallPopupsBtn = document.querySelectorAll(".jsSmallPopup");
+if (smallPopupsBtn && smallPopupsBtn.length > 0) {
+  smallPopupsBtn.forEach((btn) => {
+    const targetId = btn.dataset.target;
+    const target = document.querySelector(targetId);
+    if (target) {
+      btn.addEventListener("click", () => {
+        target.classList.add("open", "forTarget");
+      });
+
+      const closeSmallPopup = () => {
+        target.classList.remove("open", "forTarget");
+      };
+      const overlayDimm = target.querySelector(".overlay-dimm");
+      const timesBtn = target.querySelector(".popup-small__times");
+      const cancelBtn = target.querySelector(".btn-cancel");
+
+      overlayDimm.addEventListener("click", closeSmallPopup);
+      timesBtn.addEventListener("click", closeSmallPopup);
+      cancelBtn.addEventListener("click", closeSmallPopup);
+    }
+  });
+}
+
+const popupSmalls = document.querySelectorAll(".popup-small");
+if (popupSmalls && popupSmalls.length > 0) {
+  popupSmalls.forEach((popupSmall) => {
+    if (!popupSmall.classList.contains("forTarget")) {
+      const closeSmallPopup = () => {
+        popupSmall.classList.remove("open", "forTarget");
+      };
+      const overlayDimm = popupSmall.querySelector(".overlay-dimm");
+      const timesBtn = popupSmall.querySelector(".popup-small__times");
+      const cancelBtn = popupSmall.querySelector(".btn-cancel");
+
+      overlayDimm.addEventListener("click", closeSmallPopup);
+      timesBtn.addEventListener("click", closeSmallPopup);
+      cancelBtn.addEventListener("click", closeSmallPopup);
+    }
+  });
+}
+
+// [handle control tab box]----------------------------------------------------------------
 const tabContentBoxes = document.querySelectorAll(".content-tab-box");
 if (tabContentBoxes && tabContentBoxes.length > 0) {
   tabContentBoxes.forEach((tabBox) => {
@@ -314,7 +358,7 @@ if (tabContentBoxes && tabContentBoxes.length > 0) {
   });
 }
 
-// handle control sticky popup
+// [handle control sticky popup]----------------------------------------------------------------
 const stickyPopupBtn = document.querySelectorAll(".jsStickyPopup");
 if (stickyPopupBtn && stickyPopupBtn.length > 0) {
   stickyPopupBtn.forEach((btn) => {
@@ -383,6 +427,27 @@ if (stickyPopupBtn && stickyPopupBtn.length > 0) {
       } else {
         closeSlideBar.addEventListener("click", closeSidePopup);
       }
+    }
+  });
+}
+
+// [handle check all]------------------------------------------------
+const checkboxAll = document.querySelectorAll(
+  "input[type=checkbox].checkbox.all"
+);
+if (checkboxAll && checkboxAll.length > 0) {
+  checkboxAll.forEach((all) => {
+    const parent = all.closest(".checkbox-list-family");
+    if (parent) {
+      const checkboxList = parent.querySelectorAll(
+        ".checkbox-family input[type=checkbox].checkbox"
+      );
+      all.addEventListener("change", (e) => {
+        const isChecked = e.target.checked;
+        checkboxList.forEach((item) => {
+          item.checked = isChecked;
+        });
+      });
     }
   });
 }

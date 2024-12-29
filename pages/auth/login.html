@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="luxia-auth-container">
-      <div class="luxia-auth-container__cover">
+      <div class="luxia-auth-container__cover active">
         <div class="luxia-auth-container__contents">
           <div class="luxia-auth-container__headline">
             <div class="luxia-auth-container__logo">
@@ -24,7 +24,7 @@
             <div class="form-family">
               <label class="form-label">아이디</label>
               <div class="input-text input-sm">
-                <input type="email" />
+                <input type="email" placeholder="이메일 주소를 입력해주세요." />
                 <button type="button" class="btn btn-secondary">인증코드 받기</button>
               </div>
             </div>
@@ -32,12 +32,12 @@
               <label class="form-label">인증코드</label>
               <div class="form-info">인증코드 6자리를 입력해주세요.</div>
               <div class="code-family">
-                <input type="number" class="code" min="0" max="9" />
-                <input type="number" class="code" min="0" max="9" />
-                <input type="number" class="code" min="0" max="9" />
-                <input type="number" class="code" min="0" max="9" />
-                <input type="number" class="code" min="0" max="9" />
-                <input type="number" class="code" min="0" max="9" />
+                <input type="text" inputmode="numeric" pattern="\d*" class="code" />
+                <input type="text" inputmode="numeric" pattern="\d*" class="code" />
+                <input type="text" inputmode="numeric" pattern="\d*" class="code" />
+                <input type="text" inputmode="numeric" pattern="\d*" class="code" />
+                <input type="text" inputmode="numeric" pattern="\d*" class="code" />
+                <input type="text" inputmode="numeric" pattern="\d*" class="code" />
               </div>
             </div>
             <div class="checkbox-family">
@@ -49,12 +49,14 @@
         <div class="luxia-auth-container__button-cover">
           <button type="submit" class="btn btn-primary btn-100" disabled>로그인</button>
           <div class="luxia-auth-container__link-cover">
-            <a href="pages/auth/join_member.html">회원가입</a>
+            <a class="join" href="pages/auth/sign_up.html">회원가입</a>
             <div class="divide"></div>
             <span> 아직 회원이 아니신가요? </span>
           </div>
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="src/js/common/app.js"></script>
+    <script type="text/javascript" src="src/js/pages/auth.js"></script>
   </body>
 </html>

@@ -30,6 +30,9 @@
   &:disabled img, &:disabled svg {
     opacity: 0.5;
   }
+  &:disabled {
+    cursor: default !important;
+  }
 }
 .btn-lg {
   height: 56px;

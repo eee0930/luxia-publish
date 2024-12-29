@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 | LUXIA</title>
+    <base href="../../" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+    <link rel="stylesheet" href="src/css/common/style.css" />
+    <link rel="stylesheet" href="src/css/pages/auth.css" />
+  </head>
+  <body>
+    <div class="luxia-auth-container">
+      <!-- 약관 동의 -->
+      <div id="luxiaJoinAgree" class="luxia-auth-container__cover active">
+        <div class="luxia-auth-container__contents">
+          <div class="luxia-auth-container__headline">
+            <div class="luxia-auth-container__logo">
+              <img src="/assets/icons/logo.svg" />
+              <span>Ask LUXIA</span>
+            </div>
+            <div class="description-style">대화형 AI 검색 Ask LUXIA로 시작하세요.</div>
+          </div>
+          <div class="checkbox-list-family">
+            <div class="checkbox-family-all">
+              <input type="checkbox" class="checkbox all" />
+              <label>모두 동의합니다.</label>
+            </div>
+            <div class="checkbox-list">
+              <div class="checkbox-family">
+                <input type="checkbox" class="checkbox" />
+                <label>서비스 이용약관 동의 <span class="text-danger">(필수)</span></label>
+                <button type="button" class="checkbox-family__more">
+                  <img src="assets/icons/chevron-right.svg" />
+                </button>
+              </div>
+              <div class="checkbox-family">
+                <input type="checkbox" class="checkbox" />
+                <label>서비스 이용약관 동의 <span class="text-danger">(필수)</span></label>
+                <button type="button" class="checkbox-family__more">
+                  <img src="assets/icons/chevron-right.svg" />
+                </button>
+              </div>
+              <div class="checkbox-family">
+                <input type="checkbox" class="checkbox" />
+                <label>
+                  이메일을 이용한 업데이트 정보 수신 동의 <br class="is-mo" />
+                  <span class="text-gray">(선택)</span>
+                </label>
+              </div>
+              <div class="checkbox-family">
+                <input type="checkbox" class="checkbox" />
+                <label>
+                  SMS를 이용한 업데이트 정보 수신 동의 <br class="is-mo" />
+                  <span class="text-gray">(선택)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="luxia-auth-container__button-cover">
+          <button id="luxiaJoinAgreeBtn" type="button" class="btn btn-primary btn-100">다음</button>
+          <div class="luxia-auth-container__link-cover">
+            <a href="#">서비스 소개</a>
+            <div class="divide"></div>
+            <a href="#">이용약관</a>
+            <div class="divide"></div>
+            <a href="#">개인정보처리방침</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 정보 입력 -->
+      <form id="luxiaJoinAddInfo" class="luxia-auth-container__cover">
+        <div class="luxia-auth-container__contents">
+          <div class="luxia-auth-container__headline">
+            <div class="luxia-auth-container__logo">
+              <img src="/assets/icons/logo.svg" />
+              <span>Ask LUXIA</span>
+            </div>
+            <div class="description-style">대화형 AI 검색 Ask LUXIA로 시작하세요.</div>
+          </div>
+          <div class="luxia-auth-container__form">
+            <div class="form-family">
+              <label class="form-label">아이디</label>
+              <div class="input-text input-sm">
+                <input type="email" placeholder="이메일 주소를 입력해주세요." />
+                <button type="button" class="btn btn-secondary">이메일 확인</button>
+              </div>
+            </div>
+            <div class="form-family">
+              <label class="form-label">이름</label>
+              <div class="input-text input-sm">
+                <input type="text" placeholder="사용자 이름을 입력해주세요." />
+              </div>
+            </div>
+            <div class="form-family">
+              <label class="form-label">소속</label>
+              <div class="input-text input-sm">
+                <input type="text" placeholder="사용자 소속을 입력해주세요." />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="luxia-auth-container__button-cover">
+          <div class="luxia-auth-container__buttons">
+            <button id="cancelJoinAddInfo" type="reset" class="btn btn-cancel">이전</button>
+            <button type="submit" class="btn btn-primary">완료</button>
+          </div>
+          <div class="luxia-auth-container__link-cover">
+            <a href="#">서비스 소개</a>
+            <div class="divide"></div>
+            <a href="#">이용약관</a>
+            <div class="divide"></div>
+            <a href="#">개인정보처리방침</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="src/js/common/app.js"></script>
+    <script type="text/javascript" src="src/js/pages/auth.js"></script>
+  </body>
+</html>
