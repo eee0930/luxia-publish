@@ -10,6 +10,7 @@
 @import url('overlays.css');
 @import url('selection.css');
 @import url('text.css');
+@import url('loading.css');
 
 :root {
   --jumbotron-font: 'Poppins';
