@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUXIA</title>
+    <base href="../" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+    <link rel="stylesheet" href="src/css/common/style.css" />
+    <link rel="stylesheet" href="src/css/guide/components.css" />
+  </head>
+  <body>
+    <div class="guide__container">
+      <!-- [header]---------------------------------------------------------------------- -->
+      <header class="guide__header">
+        <div class="guide__header-inner">
+          <div class="title-cover">
+            <img src="assets/icons/logo.svg" />
+            <span class="title">Components Guide</span>
+          </div>
+          <a class="guide__header-link" href="/">
+            <span>IA 바로가기</span>
+            <img src="assets/icons/chevron-right.svg" />
+          </a>
+        </div>
+      </header>
+      <div class="guide__container-cover">
+        <!-- [menu]---------------------------------------------------------------------- -->
+        <div class="guide__container-menu">
+          <div class="guide__container-menu-set">
+            <div class="guide__container-menu-title">Getting Started</div>
+            <ul>
+              <li data-target="#introduction" class="jsViewGuide active">Introduction</li>
+            </ul>
+          </div>
+          <div class="guide__container-menu-set">
+            <div class="guide__container-menu-title">Layout</div>
+            <ul>
+              <li>Layout</li>
+              <li>GNB</li>
+              <li>Menu</li>
+            </ul>
+          </div>
+          <div class="guide__container-menu-set">
+            <div class="guide__container-menu-title">Text</div>
+            <ul>
+              <li>Jumbotron</li>
+              <li>Text</li>
+            </ul>
+          </div>
+          <div class="guide__container-menu-set">
+            <div class="guide__container-menu-title">Components</div>
+            <ul>
+              <li>Badge</li>
+              <li>Tab</li>
+              <li>Button</li>
+              <li>Card</li>
+              <li>Input</li>
+              <li>Selection</li>
+              <li>Overlays</li>
+            </ul>
+          </div>
+        </div>
+        <!-- [Introduction]---------------------------------------------------------------------- -->
+        <section id="introduction" class="guide__container-section">
+          <div class="guide__container-jumbotron-cover">
+            <h1 class="guide__container-jumbotron">Introduction</h1>
+            <h3 class="guide__container-title">Getting Started</h3>
+          </div>
+          <div class="guide__container-family">
+            <div class="guide__container-family__headline">
+              <h3>css, js include</h3>
+              <div class="guide__container-family__description">
+                src/scc/common dir에 있는 <b>style.css</b>와 src/js/common dir에 있는 <b>app.js</b>를 html 파일에
+                포함시켜줍니다.
+              </div>
+            </div>
+            <div class="code-family">
+              <div class="code-family__info">example</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="guide__container-mo">
+      모바일 버전에서는 가이드를 지원하지 않습니다. <br />
+      PC에서 만나요!
+    </div>
+    <script src="src/js/common/app.js"></script>
+    <script src="src/js/guide/components.js"></script>
+  </body>
+</html>

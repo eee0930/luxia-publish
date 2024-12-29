@@ -9,7 +9,7 @@ const componentDiv = createElement("a", "Components Guide", [
   "ia-label",
   "ia-primary",
 ]);
-componentDiv.href = "components/guide.html";
+componentDiv.href = "components/index.html";
 componentDiv.style.top = "184px";
 componentDiv.style.left = "100px";
 
