@@ -1,4 +1,4 @@
-/* tab box */
+/* [tab box]----------------------------------------------------------- */
 .content-tab-box {
   width: 100%;
   padding: 24px;
@@ -94,7 +94,7 @@
   } 
 }
 
-/* tab button style */
+/* [tab button]------------------------------------------------------ */
 .tab-button-family {
   width: 100%;
   display: flex;
@@ -154,7 +154,7 @@
 }
 
 
-
+/* [step]---------------------------------------------------- */
 .step {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,4 @@
+/* [custom chat]----------------------------------------------------------- */
 .luxia-custom-chat__search-cover {
   width: 100%;
 }
@@ -71,7 +72,7 @@
   gap: 8px;
 }
 
-/* add custom chat */
+/* [add custom chat]----------------------------------------------------- */
 .luxia-custom-chat__container, form {
   width: 100%;
   display: flex;

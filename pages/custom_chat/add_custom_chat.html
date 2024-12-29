@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LUXIA</title>
-    <base href="" />
+    <title>Custom chat 탐색 | LUXIA</title>
+    <base href="../../" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
     <link rel="stylesheet" href="src/css/common/style.css" />
-    <link rel="stylesheet" href="src/css/pages/home.css" />
+    <link rel="stylesheet" href="src/css/pages/custom_chat.css" />
   </head>
   <body>
     <div class="luxia-layout-container menu-active-pc">
@@ -78,7 +78,7 @@
                     <object data="assets/icons/menu/bubble_chat.svg" type="image/svg+xml"></object>
                     <span>Custom chat</span>
                   </div>
-                  <a href="" class="luxia-menu-container__sub-title-more"> 더보기 </a>
+                  <a href="#" class="luxia-menu-container__sub-title-more"> 더보기 </a>
                 </div>
                 <ul class="luxia-menu-container__sub-menu">
                   <li>
@@ -143,16 +143,18 @@
                 <span>Ask LUXIA</span>
               </div>
             </div>
-            <div class="luxia-gnb-container-menu-name">Today’s Pick</div>
+            <div class="luxia-gnb-container-menu-name">Custom chat 탐색</div>
           </div>
           <div id="luxiaGnbPopupBtn" class="luxia-gnb-container__profile">
-            <img class="luxia-gnb-container__profile-image" src="assets/icons/default_profile.svg" />
+            <img class="luxia-gnb-container__profile-image" src="assets/icons/profile_man.svg" />
             <span class="luxia-gnb-container__profile-nickname"> 루시아님 </span>
           </div>
           <div id="luxiaGnbPopupMenu" class="luxia-gnb-container__popup">
             <div class="luxia-gnb-container__popup-profile">
+              <!--/* [D] member profile image */-->
               <img class="luxia-gnb-container__popup-image" src="assets/icons/default_profile.svg" />
               <div class="luxia-gnb-container__popup-info">
+                <!--/* [D] member nickname */-->
                 <div class="luxia-gnb-container__popup-info-name">루시아님</div>
                 <div class="luxia-gnb-container__popup-info-part">Admin</div>
               </div>
@@ -201,110 +203,105 @@
               </li>
             </ul>
           </div>
+          <!--/* [D] 뒤로가기가 필요한 GNB인 경우 'active' class 추가 (Only for Mobile) */-->
+          <div class="luxia-gnb-container__back-header active">
+            <!--/* [D] target url로 이동 하는 버튼일 경우 'jsHistoryBack' class 추가 */-->
+            <button data-target-url="pages/custom_chat/custom_chat.html" type="button" class="jsHistoryBack">
+              <img src="assets/icons/gnb/chevron-left.svg" />
+              <span>Custom Chat</span>
+            </button>
+          </div>
         </header>
         <div class="luxia-layout-container__body">
           <!-- [each route pages]----------------------------------------------------------------------------------- -->
           <section class="luxia-layout-container__body-section">
-            <!-- import jumbotron.html -->
-            <div class="luxia-jumbotron-container">
-              <h1 class="luxia-jumbotron-container__title">Today’s Pick</h1>
-              <div class="luxia-jumbotron-container__description">
-                오늘의 주제를 확인하고, 관심 있는 내용을
-                <br class="is-mo" />
-                빠르고 쉽게 알아보세요!
-              </div>
-            </div>
-            <div class="card-family">
-              <!--/* [D] start of Today's Pick Card list */-->
-              <!-- card type 1 -->
-              <div class="card type-1">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/1.png" alt="직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">뉴스저널리즘</div>
-                      <h5 class="card__info-title">직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%</h5>
-                      <div class="card__info-description">
-                        내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로 결정됐다. 건강보험정책심의위원회(건정심)는
-                        이와 같은 내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로
-                      </div>
+            <form>
+              <div class="luxia-custom-chat__container">
+                <div class="luxia-custom-chat__image-cover">
+                  <div class="luxia-custom-chat__image" style="background-image: url(assets/icons/default_profile.svg)">
+                    <input type="file" accept="image/*" class="luxia-custom-chat__image-file" />
+                    <div class="luxia-custom-chat__image-add">
+                      <img src="assets/icons/chat/add-small.svg" />
                     </div>
-                    <div class="card__info-date">2024.12.04</div>
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">이름</label>
+                  <div class="input-text input-sm">
+                    <input type="text" placeholder="이 Chat의 이름을 입력하세요." />
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">설명</label>
+                  <div class="input-text input-sm">
+                    <input type="text" placeholder="이 Chat의 용도에 대한 짧은 설명을 입력하세요." />
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">지침</label>
+                  <div class="textarea-line">
+                    <textarea
+                      placeholder="이 Chat의 용도와 작동 방식, 해서는 안 되는 것 등 대화 지침을 입력하세요."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">대화예시</label>
+                  <div class="input-text input-sm">
+                    <input type="text" placeholder="입력 가능한 예시 문장을 입력하세요." />
+                    <img src="assets/icons/chat/add-small.svg" />
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">참고지식</label>
+                  <div class="input-family">
+                    <div class="input-text input-sm">
+                      <input type="search" placeholder="대화에 참고할 지식을 선택하세요." />
+                    </div>
+                    <button type="button" class="btn btn-secondary">찾아보기</button>
+                  </div>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">모델설정</label>
+                  <select class="select" required>
+                    <option value="">사용할 모델을 선택하세요</option>
+                    <option value="model1">model1</option>
+                    <option value="model2">model2</option>
+                    <option value="model3">model3</option>
+                  </select>
+                </div>
+                <div class="form-family">
+                  <label class="form-label">기타설정</label>
+                  <div class="radio-list-family">
+                    <label class="radio-family">
+                      <span>웹 검색</span>
+                      <input type="checkbox" class="radio" checked />
+                    </label>
+                    <label class="radio-family">
+                      <span>공개 설정</span>
+                      <input type="checkbox" class="radio" checked />
+                    </label>
                   </div>
                 </div>
               </div>
-              <!-- card type 2 -->
-              <div class="card type-2">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/2.png" alt="'벌써 신경전'...넷플 흑백 요리사 시즌2 참가자 모집" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">매일경제</div>
-                      <h5 class="card__info-title">“벌써 신경전”...넷플 흑백 요리사 시즌2 참가자 모집</h5>
-                      <div class="card__info-description">
-                        넷플릭스가 예능 ‘흑백요리사: 요리 계급 전쟁’ 시즌2 참가자 모집을 알렸다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.03</div>
-                  </div>
-                </div>
+              <div class="luxia-custom-chat__container-buttons">
+                <!--/* [D] target url로 이동 하는 버튼일 경우 'jsHistoryBack' class 추가 */-->
+                <button
+                  data-target-url="pages/custom_chat.html"
+                  type="reset"
+                  class="jsHistoryBack btn btn-secondary btn-lg"
+                >
+                  취소
+                </button>
+                <button type="button" class="btn btn-primary btn-lg">만들기</button>
               </div>
-              <!-- card type 3 -->
-              <div class="card type-3">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/3.png" alt="주식시장 정상 개장…당국, 금융상황 점검회의 개최" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">세계일보</div>
-                      <h5 class="card__info-title">주식시장 정상 개장…당국, 금융상황 점검회의 개최</h5>
-                      <div class="card__info-description">
-                        4일 금융위원회와 한국거래소 등에 따르면, 이날 코스피와 코스닥 등 국내 주식시장은 오전 9시 정상
-                        개장하기로 했다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.04</div>
-                  </div>
-                </div>
-              </div>
-              <!-- card type 2 -->
-              <div class="card type-2">
-                <div class="card-cover">
-                  <img src="assets/mock/imgs/4.png" alt="한국, 2025년 2월 데이비스컵 테니스 대회서 체코와 격돌" />
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">연합뉴스</div>
-                      <h5 class="card__info-title">한국, 2025년 2월 데이비스컵 테니스 대회서 체코와 격돌</h5>
-                      <div class="card__info-description">
-                        한국 남자 테니스 대표팀이 국가대항전인 데이비스컵 2025시즌 파이널스 진출전(Qualifiers) 1회전에서
-                        체코를 상대하게 됐다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.03</div>
-                  </div>
-                </div>
-              </div>
-              <!-- card type 4 -->
-              <div class="card type-4">
-                <div class="card-cover">
-                  <div class="card__info">
-                    <div class="card__info-headline">
-                      <div class="card__info-eyebrow">매일경제</div>
-                      <h5 class="card__info-title">“AI시대, 자동화가 반도체 설계 판을 바꾼다”</h5>
-                      <div class="card__info-description">
-                        “반도체 설계 자동화(Electronic Design Auto mation·EDA) 기술을 보유한 반도체 기업이 인공지능(AI)
-                        시대 승자가 될 것이다.
-                      </div>
-                    </div>
-                    <div class="card__info-date">2024.12.04</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </form>
           </section>
         </div>
       </div>
     </div>
-    <script src="src/js/common/app.js"></script>
-    <script src="src/js/pages/home.js"></script>
+
+    <script type="text/javascript" src="src/js/common/app.js"></script>
+    <script type="text/javascript" src="src/js/pages/custom_chat.js"></script>
   </body>
 </html>

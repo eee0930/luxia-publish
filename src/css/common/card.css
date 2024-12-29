@@ -1,4 +1,4 @@
-/* main card */
+/* [main card]------------------------------------------------------ */
 .card-family {
   display: flex;
   width: 100%;
@@ -216,7 +216,7 @@
   }
 }
 
-/* list card */
+/* [list card]---------------------------------------------------------- */
 .list-card {
   display: flex;
   flex-direction: column;
@@ -469,5 +469,82 @@
     button:focus, button[type="button"]:focus {
       cursor: url("../../../assets/icons/menu/focus_pointer.svg") 16 15, auto !important;
     }
+  }
+}
+
+
+/* [text card]---------------------------------------------------------------- */
+.text-card-family {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.text-card {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 16px;
+  border: 1px solid var(--gray-300);
+  background-color: var(--main-white);
+  .text-card__title-cover, .text-card__info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+  .text-card__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--main-black);   
+    width: 100%;
+    max-width: 100%;
+    flex: 1 0 0%;
+    -webkit-line-clamp: 1;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+  .text-card__info {
+    gap: 2px;
+  }
+  .text-card__info-date {
+    color: var(--gray-500);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .text-card__info-button {
+    width: 24px;
+    height: 24px;
+    img, svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .text-card__description {
+    color: var(--gray-700);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+}
+@media (min-width: 810px) {
+  .text-card {
+    gap: 16px;
   }
 }

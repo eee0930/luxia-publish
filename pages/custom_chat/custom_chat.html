@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom chat 탐색 | LUXIA</title>
-    <base href="../" />
+    <base href="../../" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
     <link rel="stylesheet" href="src/css/common/style.css" />
     <link rel="stylesheet" href="src/css/pages/custom_chat.css" />
@@ -12,7 +12,6 @@
   <body>
     <div class="luxia-layout-container menu-active-pc">
       <div class="luxia-layout-container__menu">
-        <!-- [menu.html]-------------------------------------------------------------------------------------------- -->
         <div class="luxia-menu-container">
           <div class="luxia-menu-container__dimm"></div>
           <div class="luxia-menu-container__inner">
@@ -42,7 +41,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="index.html" class="luxia-menu-container__menu-target">
+                  <a href="pages/todays_pick.html" class="luxia-menu-container__menu-target">
                     <img src="assets/icons/menu/today.svg" />
                     <span>Today's Pick</span>
                   </a>
@@ -66,7 +65,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="pages/custom_chat.html" class="luxia-menu-container__menu-target">
+                  <a href="pages/custom_chat/custom_chat.html" class="luxia-menu-container__menu-target">
                     <img src="assets/icons/menu/setting.svg" />
                     <span>Custom chat 탐색</span>
                   </a>
@@ -109,7 +108,7 @@
                     <object data="assets/icons/menu/edit_pencil.svg" type="image/svg+xml"></object>
                     <span>Recents</span>
                   </div>
-                  <a href="#" class="luxia-menu-container__sub-title-more"> 더보기 </a>
+                  <a href="pages/recents.html" class="luxia-menu-container__sub-title-more"> 더보기 </a>
                 </div>
                 <ul class="luxia-menu-container__sub-menu">
                   <li>
@@ -215,16 +214,18 @@
             </div>
             <!-- search form -->
             <div class="luxia-custom-chat__search-cover">
-              <div class="input-text input-sm">
-                <input type="search" placeholder="미리 만들어진 대화를 검색하세요." />
-                <img src="assets/icons/search.svg" />
-              </div>
+              <form method="get">
+                <div class="input-text input-sm input-lg-pc">
+                  <input type="search" placeholder="미리 만들어진 대화를 검색하세요." />
+                  <button type="submit"><img src="assets/icons/search.svg" /></button>
+                </div>
+              </form>
             </div>
             <!-- custom chat list -->
             <div class="luxia-custom-chat__custom-box-cover">
               <div class="luxia-custom-chat__custom-box-button">
                 <!--/* [D] Custom Chat 만들기 페이지로 이동 */-->
-                <a href="pages/add_custom_chat.html" class="btn btn-secondary btn-sm">
+                <a href="pages/custom_chat/add_custom_chat.html" class="btn btn-secondary btn-sm">
                   <img src="assets/icons/chat/add-small.svg" />
                   <spna>만들기</spna>
                 </a>
