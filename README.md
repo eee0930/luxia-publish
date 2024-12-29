@@ -36,23 +36,43 @@
  ┣ 📜gnb.html
  ┣ 📜jumbotron.html
  ┣ 📜layout.html
+ ┣ 📜loading.html
  ┗ 📜menu.html
 📂pages
- ┗ 📜luxia_chat.html   
+ ┣ 📂auth
+ ┃ ┣ 📜login.html
+ ┃ ┗ 📜sign_up.html
+ ┣ 📂custom_chat
+ ┃ ┣ 📜add_custom_chat.html
+ ┃ ┗ 📜custom_chat.html
+ ┣ 📜luxia_chat.html
+ ┣ 📜luxia_docs.html
+ ┣ 📜luxia_generate.html
+ ┣ 📜recents.html
+ ┗ 📜todays_pick.html 
 📂src
  ┣ 📂css
  ┃ ┣ 📂common
  ┃ ┃ ┗ 📜style.css
  ┃ ┗ 📂pages
- ┃ ┃ ┣ 📜home.css
- ┃ ┃ ┗ 📜luxia_chat.css
+ ┃ ┃ ┣ 📜auth.css
+ ┃ ┃ ┣ 📜custom_chat.css
+ ┃ ┃ ┣ 📜luxia_chat.css
+ ┃ ┃ ┣ 📜luxia_docs.css
+ ┃ ┃ ┣ 📜luxia_generate.css
+ ┃ ┃ ┣ 📜recents.css
+ ┃ ┃ ┗ 📜todays_pick.css
  ┣ 📂js
  ┃ ┣ 📂common
  ┃ ┃ ┣ 📜app.js
  ┃ ┃ ┗ 📜swiper-bundle.min.js
  ┃ ┣ 📂pages
- ┃ ┃ ┣ 📜home.js
- ┗ ┗ ┗ 📜luxia_chat.js
+ ┃ ┃ ┣ 📜auth.js
+ ┃ ┃ ┣ 📜custom_chat.js
+ ┃ ┃ ┣ 📜luxia_chat.js
+ ┃ ┃ ┣ 📜luxia_docs.js
+ ┃ ┃ ┣ 📜luxia_generate.js
+ ┗ ┗ ┗ 📜todays_pick.js
 📜index.html
 
 ```   
