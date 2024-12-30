@@ -444,7 +444,7 @@
     transition: background-color 0.3s ease;
     &:hover {
       background-color: var(--gray-50);
-      cursor: url("../../../assets/icons/menu/hover_pointer.svg") 16 15, auto;
+      cursor: pointer;
     }
     .chat-card__img {
       width: 72px;
@@ -465,9 +465,6 @@
     }
     button, button[type="button"] {
       cursor: inherit;
-    }
-    button:focus, button[type="button"]:focus {
-      cursor: url("../../../assets/icons/menu/focus_pointer.svg") 16 15, auto !important;
     }
   }
 }

@@ -236,13 +236,6 @@
     padding: 0 6px;
     &:hover {
       background-color: var(--gray-50);
-      cursor: url("../../../assets/icons/menu/hover_pointer.svg") 16 15, auto;
-    }
-    &:focus {
-      cursor: url("../../../assets/icons/menu/focus_pointer.svg") 16 15, auto;
-    }
-    span {
-      cursor: inherit;
     }
   }
   .luxia-menu-container__menu-target:focus {
