@@ -1,21 +1,17 @@
 .luxia-auth-container {
   min-height: 100vh;
-  padding: 0 16px 40px;
+  padding: 64px 16px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .luxia-auth-container__cover {
   background-color: var(--main-white);
   width: 100%;
   min-height: 480px;
   max-height: 600px;
-  padding: 32px 24px;
   display: none;
   flex-direction: column;
   gap: 40px;
-  border-radius: 16px;
-  border: 1px solid var(--gray-300);
   &.active {
     display: flex;
   }
@@ -100,11 +96,15 @@
 
 @media (min-width: 810px) {
   .luxia-auth-container {
+    justify-content: center;
+    align-items: center;
     padding: 0 16px 0;
   }
   .luxia-auth-container__cover {
     width: 460px;
     max-height: 640px;
     padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--gray-300);
   }
 }
