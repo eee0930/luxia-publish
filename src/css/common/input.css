@@ -341,31 +341,24 @@
   gap: 6px;
 }
 .code {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
   padding: 10px 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
   border: 1px solid var(--gray-300);
   background-color: var(--main-white);
   outline: none;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1;
   letter-spacing: -0.02em;
   color: var(--main-black);
   text-align: center;
   &:focus {
     outline: none;
     box-shadow: var(--shadow-sm);
-  }
-}
-@media (min-width: 810px) {
-  .code {
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
   }
 }
