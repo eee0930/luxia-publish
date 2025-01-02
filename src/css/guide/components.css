@@ -48,10 +48,12 @@
   flex-wrap: wrap;
   gap: 24px;
   min-height: calc(100vh - 60px);
+  padding-left: 220px;
 }
 .guide__container-menu {
-  position: sticky;
+  position: fixed;
   top: 60px;
+  left: calc(50% - 600px);
   width: 220px;
   padding: 30px 10px;
   display: flex;
@@ -103,12 +105,16 @@
 }
 .guide__container-section {
   width: 100%;
-  max-width: 100%;
+  max-width: 770px;
   flex: 1 0 0%;
   padding: 30px 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 40px;
+  margin: 0 auto;
+  &.active {
+    display: flex;
+  }
 }
 .guide__container-jumbotron-cover {
   display: flex;
@@ -160,7 +166,7 @@
   }
 }
 .code-family {
-  padding-left: 10px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -172,8 +178,51 @@
     color: var(--main-white);
     height: max-content;
   }
+  ol {
+    margin-bottom: 30px;
+  }
 }
-
+.code-family pre {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  word-wrap: break-word;
+  font-family: Menlo, Consolas, Monaco, monospace;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-x: auto;
+}
+.code-family pre code {
+  padding: 0 16px;
+  background-color: #111525;
+  color: #cdcfe2;
+  font-weight: lighter;
+  line-height: 24px;
+  display: block;
+  overflow-x: auto;
+}
+.code-family pre code {
+  .hljs-tag {
+    color: #8fd2ff;
+  }
+  .hljs-name {
+    color: #ffc347;
+  }
+  .hljs-attr {
+    color: #ff9393;
+  }
+  .hljs-template-tag, .hljs-template-variable, .hljs-string {
+    color: #e2ff93;
+  }
+}
+.guide__container-family ol {
+  list-style-type: decimal;
+  padding-left: 18px;
+  font-size: inherit;
+  line-height: 1.4;
+  li {
+    margin-bottom: 12px;
+  }
+}
 
 @media (max-width: 1024px) {
   .guide__container {
