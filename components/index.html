@@ -706,31 +706,264 @@
           </div>
           <div class="guide__container-family">
             <div class="guide__container-family__headline">
-              <h3>css, js include</h3>
+              <h3>cards</h3>
               <div class="guide__container-family__description">
-                src/scc/common dir에 있는 <b>style.css</b>와 src/js/common dir에 있는 <b>app.js</b>를 html 파일에
-                포함시켜줍니다.
+                image, title, description 등을 다양한 모양의 카드로 나타낼 수 있습니다.
+              </div>
+            </div>
+            <div class="code-family">
+              <div class="code-family__info">view</div>
+              <div class="card-family">
+                <!-- card type 1 -->
+                <div class="card type-1">
+                  <div class="card-cover">
+                    <img src="assets/mock/imgs/1.png" alt="직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%" />
+                    <div class="card__info">
+                      <div class="card__info-headline">
+                        <div class="card__info-eyebrow">뉴스저널리즘</div>
+                        <h5 class="card__info-title">직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%</h5>
+                        <div class="card__info-description">
+                          내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로 결정됐다.
+                          건강보험정책심의위원회(건정심)는 이와 같은 내년도 직장가입자 건강보험료율이 올해와 같은
+                          7.09%로
+                        </div>
+                      </div>
+                      <div class="card__info-date">2024.12.04</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card type 2 -->
+                <div class="card type-2">
+                  <div class="card-cover">
+                    <img src="assets/mock/imgs/2.png" alt="'벌써 신경전'...넷플 흑백 요리사 시즌2 참가자 모집" />
+                    <div class="card__info">
+                      <div class="card__info-headline">
+                        <div class="card__info-eyebrow">매일경제</div>
+                        <h5 class="card__info-title">“벌써 신경전”...넷플 흑백 요리사 시즌2 참가자 모집</h5>
+                        <div class="card__info-description">
+                          넷플릭스가 예능 ‘흑백요리사: 요리 계급 전쟁’ 시즌2 참가자 모집을 알렸다.
+                        </div>
+                      </div>
+                      <div class="card__info-date">2024.12.03</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card type 3 -->
+                <div class="card type-3">
+                  <div class="card-cover">
+                    <img src="assets/mock/imgs/3.png" alt="주식시장 정상 개장…당국, 금융상황 점검회의 개최" />
+                    <div class="card__info">
+                      <div class="card__info-headline">
+                        <div class="card__info-eyebrow">세계일보</div>
+                        <h5 class="card__info-title">주식시장 정상 개장…당국, 금융상황 점검회의 개최</h5>
+                        <div class="card__info-description">
+                          4일 금융위원회와 한국거래소 등에 따르면, 이날 코스피와 코스닥 등 국내 주식시장은 오전 9시 정상
+                          개장하기로 했다.
+                        </div>
+                      </div>
+                      <div class="card__info-date">2024.12.04</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card type 4 -->
+                <div class="card type-4">
+                  <div class="card-cover">
+                    <div class="card__info">
+                      <div class="card__info-headline">
+                        <div class="card__info-eyebrow">매일경제</div>
+                        <h5 class="card__info-title">“AI시대, 자동화가 반도체 설계 판을 바꾼다”</h5>
+                        <div class="card__info-description">
+                          “반도체 설계 자동화(Electronic Design Auto mation·EDA) 기술을 보유한 반도체 기업이
+                          인공지능(AI) 시대 승자가 될 것이다.
+                        </div>
+                      </div>
+                      <div class="card__info-date">2024.12.04</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="code-family">
               <div class="code-family__info">example</div>
               <!--code import -->
               <pre><code class="hljs xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-...
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"src/css/common/style.css"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-...
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"src/js/common/app.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-      </code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-family"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- card type 1 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card type-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-cover"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/mock/imgs/1.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-headline"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-eyebrow"</span>&gt;</span>뉴스저널리즘<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-title"</span>&gt;</span>직장가입자 건강보험료율 7년 만에 '동결' 내년에도 7.09%<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-description"</span>&gt;</span>
+                내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로 결정됐다. 건강보험정책심의위원회(건정심)는
+                이와 같은 내년도 직장가입자 건강보험료율이 올해와 같은 7.09%로
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-date"</span>&gt;</span>2024.12.04<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- card type 2 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card type-2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-cover"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/mock/imgs/2.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"'벌써 신경전'...넷플 흑백 요리사 시즌2 참가자 모집"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-headline"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-eyebrow"</span>&gt;</span>매일경제<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-title"</span>&gt;</span>“벌써 신경전”...넷플 흑백 요리사 시즌2 참가자 모집<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-description"</span>&gt;</span>
+                넷플릭스가 예능 ‘흑백요리사: 요리 계급 전쟁’ 시즌2 참가자 모집을 알렸다.
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-date"</span>&gt;</span>2024.12.03<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- card type 3 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card type-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-cover"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/mock/imgs/3.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"주식시장 정상 개장…당국, 금융상황 점검회의 개최"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-headline"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-eyebrow"</span>&gt;</span>세계일보<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-title"</span>&gt;</span>주식시장 정상 개장…당국, 금융상황 점검회의 개최<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-description"</span>&gt;</span>
+                4일 금융위원회와 한국거래소 등에 따르면, 이날 코스피와 코스닥 등 국내 주식시장은 오전 9시 정상
+                개장하기로 했다.
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-date"</span>&gt;</span>2024.12.04<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+    <span class="hljs-comment">&lt;!-- card type 4 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card type-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-cover"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-headline"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-eyebrow"</span>&gt;</span>매일경제<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-title"</span>&gt;</span>“AI시대, 자동화가 반도체 설계 판을 바꾼다”<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-description"</span>&gt;</span>
+                “반도체 설계 자동화(Electronic Design Auto mation·EDA) 기술을 보유한 반도체 기업이 인공지능(AI)
+                시대 승자가 될 것이다.
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card__info-date"</span>&gt;</span>2024.12.04<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          </code></pre>
             </div>
             <div class="code-family">
               <ol>
-                <li><b>style.css</b>에는 모든 components의 style이 import되어 있습니다.</li>
-                <li><b>app.js</b>에는 모든 components의 인터렉션와 모션이 구현되어 있습니다.</li>
+                <li>card는 총 4가지 타입이 있습니다.</li>
+                <li>올바른 정렬과 layout을 위해 반드시 <b>card-family</b> class를 가진 div로 감싸주세요.</li>
               </ol>
+            </div>
+          </div>
+
+          <div class="guide__container-family">
+            <div class="guide__container-family__headline">
+              <h3>list card</h3>
+            </div>
+            <div class="code-family">
+              <div class="code-family__info">view</div>
+              <div class="list-card card-sm">
+                <div class="eyebrow">
+                  <img src="assets/imgs/jungang.png" />
+                  <span>중앙일보</span>
+                </div>
+                <div class="context">
+                  <div class="title">“AI시대, 자동화가 반도체 설계 판을 바꾼다”</div>
+                  <div class="description">
+                    “반도체 설계 자동화(Electronic Design Auto mation·EDA) 기술을 보유한 반도체 기업이 인공지능(AI) 시대
+                    승자가 될 것이다.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="code-family">
+              <div class="code-family__info">example</div>
+              <!--code import -->
+              <pre><code class="hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-card card-sm"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"eyebrow"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/imgs/jungang.png"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>중앙일보<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"context"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>“AI시대, 자동화가 반도체 설계 판을 바꾼다”<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"description"</span>&gt;</span>
+        “반도체 설계 자동화(Electronic Design Auto mation·EDA) 기술을 보유한 반도체 기업이
+        인공지능(AI) 시대 승자가 될 것이다.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          </code></pre>
+            </div>
+
+            <div class="code-family">
+              <div class="code-family__info">view</div>
+              <div class="list-card card-lg">
+                <div class="eyebrow">
+                  <div class="from">
+                    <img src="assets/imgs/newsis.png" />
+                    <span>뉴스1</span>
+                  </div>
+                  <div class="buttons">
+                    <button type="button" class="luxia-anwser-container__summary-btn">요약하기</button>
+                    <div class="divide"></div>
+                    <button type="button">원문보기</button>
+                  </div>
+                </div>
+                <div class="context">
+                  <div class="title">서면으로 진행하는 건강보험 심판청구 분쟁조정회의</div>
+                  <div class="description">
+                    최근 이같은 내용의 '건강보험분쟁조정위원회사무국 종합감사 처분 요구서'를 공개했다.
+                    건강보험분쟁조정위원회는 요양기관이 건강보험심사평가원... 운영규정에는 위원회 회의와 관련해 구성원
+                    과반수 출석
+                  </div>
+                </div>
+                <div class="date">2024.12.03</div>
+              </div>
+            </div>
+            <div class="code-family">
+              <div class="code-family__info">example</div>
+              <!--code import -->
+              <pre><code class="hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-card card-lg"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"eyebrow"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"from"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/imgs/newsis.png"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>뉴스1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"buttons"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"luxia-anwser-container__summary-btn"</span>&gt;</span>요약하기<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divide"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>원문보기<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"context"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>서면으로 진행하는 건강보험 심판청구 분쟁조정회의<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"description"</span>&gt;</span>
+        최근 이같은 내용의 '건강보험분쟁조정위원회사무국 종합감사 처분 요구서'를 공개했다.
+        건강보험분쟁조정위원회는 요양기관이 건강보험심사평가원... 운영규정에는 위원회 회의와 관련해 구성원
+        과반수 출석
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"date"</span>&gt;</span>2024.12.03<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          </code></pre>
             </div>
           </div>
         </section>
