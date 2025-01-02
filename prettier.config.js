@@ -4,7 +4,7 @@ module.exports = {
       files: "*.html",
       options: {
         parser: "html",
-        printWidth: 120, // 줄바꿈을 사실상 방지
+        printWidth: 120,
       },
     },
   ],
